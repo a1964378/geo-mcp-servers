@@ -29,7 +29,7 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**52 servers tracked** across 9 categories.
+**54 servers tracked** across 10 categories.
 
 ### Categories
 
@@ -41,6 +41,7 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 - [Weather & climate](#weather--climate) (5)
 - [Desktop & enterprise GIS (QGIS, ArcGIS)](#desktop--enterprise-gis-qgis-arcgis) (9)
 - [General GIS / geoprocessing toolkits](#general-gis--geoprocessing-toolkits) (3)
+- [Geospatial data access & catalogs](#geospatial-data-access--catalogs) (2)
 - [Other (IP geolocation, misc)](#other-ip-geolocation-misc) (3)
 
 ### Geocoding & place search
@@ -131,6 +132,13 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 | [gdal-mcp](https://github.com/JordanGunn/gdal-mcp) | GDAL-style raster/vector workflows (Rasterio, GeoPandas, PyProj) — conversion, reprojection, COG, metadata | Python | JordanGunn / Wayfinder-Foundry | community |
 | [geoserver-mcp](https://github.com/mahdin75/geoserver-mcp) | Drives the GeoServer REST API — manage workspaces/layers/styles, CQL spatial queries, WMS/WFS access | Python | mahdin75 | community |
 | [gis-mcp](https://github.com/mahdin75/gis-mcp) | Connects LLMs to core GIS libraries (Shapely, PyProj, GeoPandas, Rasterio, PySAL) for geometry, projections, raster & spatial stats | Python | mahdin75 | community |
+
+### Geospatial data access & catalogs
+
+| Server | Description | Lang | By | Type |
+| --- | --- | --- | --- | --- |
+| [Arraylake MCP Server](https://docs.earthmover.io/mcp/) | Browse Arraylake repos, inspect schemas, run OGC EDR queries & render maps over Zarr/Icechunk scientific arrays | — | Earthmover | official |
+| [Tilebox MCP Server](https://tilebox.com/blog/grounding-llms-in-live-space-data) | Grounds LLMs in live Tilebox space data — discover datasets, introspect real-time schemas, trigger & inspect EO workflows | — | Tilebox | official |
 
 ### Other (IP geolocation, misc)
 

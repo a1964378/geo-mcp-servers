@@ -444,6 +444,25 @@ servers:
     note: install docs for Claude Code / OpenCode; confirm canonical repo/doc URL
     added: 2026-08-02
 
+  # ---- Geospatial data access & catalogs ----
+  - name: Tilebox MCP Server
+    url: https://tilebox.com/blog/grounding-llms-in-live-space-data
+    description: Grounds LLMs in live Tilebox space data — discover datasets, introspect real-time schemas, trigger & inspect EO workflows
+    category: data_access
+    author: Tilebox
+    official: true
+    tags: [tilebox, earth-observation, workflows, schemas]
+    note: part of the Tilebox platform/CLI (no standalone public repo); prefer a docs.tilebox.com MCP URL once confirmed
+    added: 2026-08-02
+  - name: Arraylake MCP Server
+    url: https://docs.earthmover.io/mcp/
+    description: Browse Arraylake repos, inspect schemas, run OGC EDR queries & render maps over Zarr/Icechunk scientific arrays
+    category: data_access
+    author: Earthmover
+    official: true
+    tags: [arraylake, zarr, icechunk, edr, scientific-data, hosted]
+    added: 2026-08-02
+
   # ---- Other (IP geolocation, misc) ----
   - name: mcp-server-ipinfo
     url: https://github.com/briandconnelly/mcp-server-ipinfo
