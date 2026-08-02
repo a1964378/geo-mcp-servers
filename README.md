@@ -16,6 +16,17 @@ The tables below are **generated** from [`servers.yaml`](servers.yaml) — the s
 
 > **Legend** — *Type* is `official` (published by the platform/data vendor) or `community` (independent). A few entries carry a `note:` in `servers.yaml` flagging a URL still to be confirmed.
 
+## Use it as a Claude skill
+
+This repo ships a [Claude Code](https://claude.com/claude-code) skill in [`skill/`](skill/) that searches/recommends servers from the catalog and adds new ones. Install it by symlinking into your skills directory (the skill resolves the repo location from this symlink — no hard-coded paths):
+
+```bash
+git clone https://github.com/<owner>/geo-mcp-servers.git
+ln -sfn "$(pwd)/geo-mcp-servers/skill" ~/.claude/skills/geo-mcp-servers
+```
+
+Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"track this new geo MCP server: <url>"*.
+
 <!-- AUTOGEN:START -->
 
 **52 servers tracked** across 9 categories.

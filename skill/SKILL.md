@@ -6,23 +6,37 @@ description: Browse, search, and recommend geospatial / GIS / mapping / earth-ob
 # Geospatial MCP Servers
 
 This skill wraps a curated, version-controlled catalog of MCP servers for
-geospatial work. The catalog lives at:
+geospatial work. `servers.yaml` is the source of truth; `README.md` is
+generated from it.
 
-    ~/tinkering/geo-mcp-servers
+## Locate the catalog
 
-`servers.yaml` is the source of truth; `README.md` is generated from it.
+The skill is installed at `~/.claude/skills/geo-mcp-servers`, a symlink into
+the cloned repo's `skill/` directory. Resolve the repo root from it — do not
+assume any absolute path:
+
+```bash
+REPO="$(cd "$(dirname "$(readlink ~/.claude/skills/geo-mcp-servers)")" && pwd -P)"
+echo "$REPO"   # repo root — parent of the skill dir
+```
+
+If `readlink` returns nothing (the skill was copied rather than symlinked), ask
+the user where they cloned `geo-mcp-servers`, or search for it, e.g.
+`find ~ -name servers.yaml -path '*geo-mcp-servers*' 2>/dev/null`. Use the
+resolved `$REPO` in every command below.
 
 ## Find / recommend a server
 
 1. Read the catalog data:
 
    ```bash
-   cat ~/tinkering/geo-mcp-servers/servers.yaml
+   REPO="$(cd "$(dirname "$(readlink ~/.claude/skills/geo-mcp-servers)")" && pwd -P)"
+   cat "$REPO/servers.yaml"
    ```
 
 2. Match the user's need to a `category` and to entry `tags`/`description`.
    Categories include: geocoding, routing, mapping, database (PostGIS/DuckDB),
-   remote_sensing (STAC/EO), weather, desktop_gis (QGIS/ArcGIS/GRASS), toolkit,
+   remote_sensing (STAC/EO), weather, desktop_gis (QGIS/ArcGIS), toolkit,
    data_access, other.
 
 3. Recommend the closest 1–3 servers with their URLs and a one-line why. If
@@ -35,8 +49,7 @@ this one"):
 
 1. Confirm it's real and geospatial — fetch/inspect the source URL if needed.
 2. Check it isn't already in `servers.yaml` (match on url and name).
-3. Append an entry under `servers:` in
-   `~/tinkering/geo-mcp-servers/servers.yaml`:
+3. Append an entry under `servers:` in `$REPO/servers.yaml`:
 
    ```yaml
      - name: <Name>
@@ -53,11 +66,15 @@ this one"):
 4. Regenerate the README (the repo ships a `.venv` with PyYAML):
 
    ```bash
-   ~/tinkering/geo-mcp-servers/.venv/bin/python ~/tinkering/geo-mcp-servers/scripts/generate_readme.py
+   REPO="$(cd "$(dirname "$(readlink ~/.claude/skills/geo-mcp-servers)")" && pwd -P)"
+   "$REPO/.venv/bin/python" "$REPO/scripts/generate_readme.py"
    ```
 
-5. Report what you added. If in a git context, offer to commit
-   `servers.yaml` + `README.md` together (don't push without asking).
+   If `$REPO/.venv` is missing (fresh clone), create it once:
+   `python3 -m venv "$REPO/.venv" && "$REPO/.venv/bin/pip" install -r "$REPO/requirements.txt"`.
+
+5. Report what you added, and offer to commit `servers.yaml` + `README.md`
+   together (don't push without asking).
 
 ## Notes
 
