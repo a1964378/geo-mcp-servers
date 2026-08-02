@@ -29,13 +29,13 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**54 servers tracked** across 9 categories.
+**55 servers tracked** across 9 categories.
 
 ### Categories
 
 - [Geocoding & place search](#geocoding--place-search) (9)
 - [Routing, isochrones & navigation](#routing-isochrones--navigation) (1)
-- [Maps, tiles & commercial platforms](#maps-tiles--commercial-platforms) (11)
+- [Maps, tiles & commercial platforms](#maps-tiles--commercial-platforms) (12)
 - [Spatial databases & analytics](#spatial-databases--analytics) (2)
 - [Remote sensing, STAC & earth observation](#remote-sensing-stac--earth-observation) (11)
 - [Weather & climate](#weather--climate) (5)
@@ -70,6 +70,7 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 | [ArcGIS Location Services MCP (beta)](https://developers.arcgis.com/ai-tools/mcp-arcgis-location-services/) | Official Esri MCP exposing ArcGIS Location Platform services — geocoding, routing, static maps | — | Esri | official |
 | [baidu-maps/mcp](https://github.com/baidu-maps/mcp) | Official Baidu Map — geocoding, POI, route planning, weather, IP location, traffic (China) | Python / TypeScript | Baidu | official |
 | [CARTO MCP Server](https://docs.carto.com/carto-for-agents/mcp-server) | Remote MCP over CARTO — explore data, render Builder maps inline, run saved spatial Workflows on your cloud warehouse | — | CARTO | official |
+| [Cesium AI Integrations](https://github.com/CesiumGS/cesium-ai-integrations) | Official Cesium MCP servers & agent skills connecting the Cesium 3D geospatial ecosystem (CesiumJS, 3D Tiles) to AI assistants | TypeScript | Cesium (CesiumGS) | official |
 | [Felt MCP Server](https://felt.com/blog/introducing-felt-mcp-server) | Remote MCP — create maps, query warehouse, run spatial SQL, style layers, publish live URLs | — | Felt | official |
 | [foursquare-places-mcp](https://github.com/foursquare/foursquare-places-mcp) | Official Foursquare Places API v3 — venue search, place details, location context | TypeScript | Foursquare | official |
 | [Google Maps MCP (reference)](https://github.com/modelcontextprotocol/servers) | Reference server — geocoding, places, directions, distance matrix, elevation (now archived) | TypeScript | Anthropic / MCP project | official |

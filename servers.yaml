@@ -131,6 +131,16 @@ servers:
     added: 2026-08-02
 
   # ---- Maps, tiles & commercial platforms ----
+  - name: Cesium AI Integrations
+    url: https://github.com/CesiumGS/cesium-ai-integrations
+    description: Official Cesium MCP servers & agent skills connecting the Cesium 3D geospatial ecosystem (CesiumJS, 3D Tiles) to AI assistants
+    category: mapping
+    author: Cesium (CesiumGS)
+    language: TypeScript
+    official: true
+    tags: [cesium, 3d-tiles, cesiumjs, globe, visualization]
+    note: a collection of reference MCP servers/skills, not a single server
+    added: 2026-08-02
   - name: ArcGIS Location Services MCP (beta)
     url: https://developers.arcgis.com/ai-tools/mcp-arcgis-location-services/
     description: Official Esri MCP exposing ArcGIS Location Platform services — geocoding, routing, static maps
