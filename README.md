@@ -1,0 +1,132 @@
+# Geospatial MCP Servers
+
+A curated, tracked list of [Model Context Protocol](https://modelcontextprotocol.io) (MCP) servers for **geospatial, GIS, mapping, and earth-observation** work — geocoding, routing, PostGIS, STAC/imagery, QGIS/ArcGIS, weather, and the commercial location platforms.
+
+The tables below are **generated** from [`servers.yaml`](servers.yaml) — the single source of truth.
+
+## Add a server
+
+- **Quick:** open a [New server issue](../../issues/new?template=new-server.yml).
+- **Direct:** add an entry to [`servers.yaml`](servers.yaml) and regenerate — see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+  ```bash
+  python3 -m venv .venv && ./.venv/bin/pip install -r requirements.txt   # first time
+  ./.venv/bin/python scripts/generate_readme.py                          # regenerate tables
+  ```
+
+> **Legend** — *Type* is `official` (published by the platform/data vendor) or `community` (independent). A few entries carry a `note:` in `servers.yaml` flagging a URL still to be confirmed.
+
+<!-- AUTOGEN:START -->
+
+**52 servers tracked** across 9 categories.
+
+### Categories
+
+- [Geocoding & place search](#geocoding--place-search) (9)
+- [Routing, isochrones & navigation](#routing-isochrones--navigation) (1)
+- [Maps, tiles & commercial platforms](#maps-tiles--commercial-platforms) (11)
+- [Spatial databases & analytics](#spatial-databases--analytics) (2)
+- [Remote sensing, STAC & earth observation](#remote-sensing-stac--earth-observation) (9)
+- [Weather & climate](#weather--climate) (5)
+- [Desktop & enterprise GIS (QGIS, ArcGIS)](#desktop--enterprise-gis-qgis-arcgis) (9)
+- [General GIS / geoprocessing toolkits](#general-gis--geoprocessing-toolkits) (3)
+- [Other (IP geolocation, misc)](#other-ip-geolocation-misc) (3)
+
+### Geocoding & place search
+
+| Server | Description | Lang | By | Type |
+| --- | --- | --- | --- | --- |
+| [geocode-mcp](https://github.com/X-McKay/geocode-mcp) | Lat/long for places via free Nominatim, no API key | Python | X-McKay | community |
+| [geocoding-ai/mcp](https://github.com/geocoding-ai/mcp) | Access to free geocoding | — | geocoding-ai | community |
+| [MCP-Geo](https://github.com/webcoderz/MCP-Geo) | Geocoding MCP built on GeoPy — multi-provider (Nominatim, ArcGIS, Bing) | Python | webcoderz | community |
+| [mcp-nominatim](https://github.com/pipeworx-io/mcp-nominatim) | Geocoding / reverse geocoding via OSM Nominatim | Python | pipeworx-io | community |
+| [open-streetmap-mcp](https://github.com/jagan-shanmugam/open-streetmap-mcp) | OSM location services — geocode/reverse, POI, directions, meeting points, neighborhood analysis | Python | Jagan Shanmugam | community |
+| [openstreetmap-mcp-server](https://github.com/cyanheads/openstreetmap-mcp-server) | Geocode, reverse geocode, and Overpass spatial queries (STDIO or Streamable HTTP) | TypeScript | cyanheads | community |
+| [OSM-GeoJSON-MCP-Server](https://github.com/shimizu/OSM-GeoJSON-MCP-Server) | Fetches OSM data as GeoJSON via Overpass | JavaScript | shimizu | community |
+| [osmmcp](https://github.com/NERVsystems/osmmcp) | OSM geospatial tools — geocoding, routing, nearby places, neighborhood analysis, EV charging | Go | NERV Systems | community |
+| [what3words MCP](https://mcpmarket.com/server/what3words) | Convert 3-word addresses to lat/long + bounding box | — | Pipeworx (uses what3words API) | community |
+
+### Routing, isochrones & navigation
+
+| Server | Description | Lang | By | Type |
+| --- | --- | --- | --- | --- |
+| [valhalla-mcp](https://github.com/aatakansalar/valhalla-mcp) | Valhalla OSM routing engine — routing, isochrones, tiles, matrix | TypeScript | Atakan Salar | community |
+
+### Maps, tiles & commercial platforms
+
+| Server | Description | Lang | By | Type |
+| --- | --- | --- | --- | --- |
+| [ArcGIS Location Services MCP (beta)](https://developers.arcgis.com/ai-tools/mcp-arcgis-location-services/) | Official Esri MCP exposing ArcGIS Location Platform services — geocoding, routing, static maps | — | Esri | official |
+| [baidu-maps/mcp](https://github.com/baidu-maps/mcp) | Official Baidu Map — geocoding, POI, route planning, weather, IP location, traffic (China) | Python / TypeScript | Baidu | official |
+| [CARTO MCP Server](https://docs.carto.com/carto-for-agents/mcp-server) | Remote MCP over CARTO — explore data, render Builder maps inline, run saved spatial Workflows on your cloud warehouse | — | CARTO | official |
+| [Felt MCP Server](https://felt.com/blog/introducing-felt-mcp-server) | Remote MCP — create maps, query warehouse, run spatial SQL, style layers, publish live URLs | — | Felt | official |
+| [foursquare-places-mcp](https://github.com/foursquare/foursquare-places-mcp) | Official Foursquare Places API v3 — venue search, place details, location context | TypeScript | Foursquare | official |
+| [Google Maps MCP (reference)](https://github.com/modelcontextprotocol/servers) | Reference server — geocoding, places, directions, distance matrix, elevation (now archived) | TypeScript | Anthropic / MCP project | official |
+| [google-maps-mcp-server](https://github.com/david-pivonka/google-maps-mcp-server) | STDIO server on the new Google Places (New) + Routes APIs | TypeScript | david-pivonka | community |
+| [google-maps-places-mcp](https://github.com/domdomegg/google-maps-places-mcp) | Google Places search + photos | TypeScript | domdomegg | community |
+| [Mapbox MCP Server](https://github.com/mapbox/mcp-server) | Official Mapbox web services — geocoding, POI search, multimodal routing, matrix, isochrones, static maps | TypeScript | Mapbox | official |
+| [MapTiler MCP](https://mcpmarket.com/server/maptiler) | Geocoding, elevation, and mapping APIs as MCP tools | — | MapTiler | official |
+| [mcp-google-map](https://github.com/cablate/mcp-google-map) | Google Places (New), Routes, geocoding, distance matrix | TypeScript | cablate | community |
+
+### Spatial databases & analytics
+
+| Server | Description | Lang | By | Type |
+| --- | --- | --- | --- | --- |
+| [postgis-mcp](https://github.com/receptopalak/postgis-mcp) | PostGIS database connection over MCP — multi-connection via env vars | Node.js | receptopalak | community |
+| [Wherobots MCP Server](https://wherobots.com) | Direct access to WherobotsDB (Apache Sedona) — design & run spatial SQL over S3 & Unity Catalog data | Python | Wherobots | official |
+
+### Remote sensing, STAC & earth observation
+
+| Server | Description | Lang | By | Type |
+| --- | --- | --- | --- | --- |
+| [Axion-MCP](https://github.com/Dhenenjay/Axion-MCP) | Earth Engine analysis platform for Claude Desktop — NDVI/NDWI, classification, maps | TypeScript | Dhenenjay | community |
+| [copernicus-mcp](https://github.com/wb1016/copernicus-mcp) | Access ESA Copernicus OData API — search/download Sentinel-1/2/3/5P/6 imagery | Python | wb1016 | community |
+| [earthdata-mcp](https://github.com/nasa/earthdata-mcp) | LLM access to NASA Common Metadata Repository — discover/verify/access Earth science datasets | Python | NASA | official |
+| [google-earth-engine-mcp](https://github.com/cameronking4/google-earth-engine-mcp) | Query Google Earth Engine with natural language — fetch datasets, run tasks, visualize in chat | TypeScript | cameronking4 | community |
+| [NASA-MCP-server](https://github.com/ProgramComputer/NASA-MCP-server) | Standardized interface to many NASA APIs incl. Earth observations & imagery | TypeScript | ProgramComputer | community |
+| [planetary-computer-mcp](https://github.com/isaaccorley/planetary-computer-mcp) | Query & download satellite imagery from the Microsoft Planetary Computer STAC API | Python | Isaac Corley | community |
+| [SkyFi MCP](https://github.com/jpwilson/skyfi-mcp) | Search 150+ satellites from 12+ providers, compare pricing, order archive or tasking imagery in natural language | — | jpwilson (SkyFi platform) | community |
+| [stac-mcp](https://github.com/BnJam/stac-mcp) | Natural-language search of any STAC-compliant catalog (defaults to Planetary Computer) | Python | BnJam | community |
+| [unicef-gee-mcp](https://github.com/tryolabs/unicef-gee-mcp) | Google Earth Engine access/analysis for UNICEF workflows | Python | Tryolabs (for UNICEF) | community |
+
+### Weather & climate
+
+| Server | Description | Lang | By | Type |
+| --- | --- | --- | --- | --- |
+| [mcp_weather_server](https://github.com/isdaniel/mcp_weather_server) | Weather info via the Open-Meteo API | Python | isdaniel | community |
+| [nws-mcp-server](https://github.com/nitvob/nws-mcp-server) | Quickstart NWS server — get-alerts + get-forecast from the National Weather Service | TypeScript | nitvob | community |
+| [open-meteo-mcp](https://github.com/cmer81/open-meteo-mcp) | Full Open-Meteo API — forecast, ERA5 archive, air quality, marine, seasonal | TypeScript | cmer81 | community |
+| [weather-mcp](https://github.com/weather-mcp/weather-mcp) | 17 weather tools — forecasts, alerts, air quality, marine, radar, lightning, rivers, wildfires, history to 1940 (NOAA + Open-Meteo) | Python | weather-mcp | community |
+| [weather-mcp (Fahrenheit)](https://github.com/FahrenheitResearch/weather-mcp) | 12 tools — NWS data, NWP model imagery, NEXRAD radar, 205 meteorological calculations | Python | FahrenheitResearch | community |
+
+### Desktop & enterprise GIS (QGIS, ArcGIS)
+
+| Server | Description | Lang | By | Type |
+| --- | --- | --- | --- | --- |
+| [ArcGISMCP](https://github.com/GarrickGarcia/ArcGISMCP) | Integrates ArcGIS Online — search/query geospatial feature layers | Python | GarrickGarcia | community |
+| [esri-mcp](https://github.com/eKerney/esri-mcp) | Query & map Esri Living Atlas data, focus on water resources | Python | eKerney | community |
+| [MCP-ArcGISPro](https://github.com/geo2004/MCP-ArcGISPro) | Control and automate ArcGIS Pro from Claude Desktop | Python | geo2004 | community |
+| [MCP-Server-ArcGIS-Pro-AddIn](https://github.com/nicogis/MCP-Server-ArcGIS-Pro-AddIn) | MCP server delivered as an ArcGIS Pro add-in | C#/.NET | nicogis | community |
+| [qgis-mcp (nkarasiak)](https://github.com/nkarasiak/qgis-mcp) | 117 QGIS tools — layer mgmt, feature editing, processing, styling, layout/atlas, cross-layer SQL | Python | nkarasiak | community |
+| [qgis-mcp-1](https://github.com/Sir-Adrien-Claudington/qgis-mcp-1) | Fork connecting QGIS to Claude via MCP | Python | Sir-Adrien-Claudington | community |
+| [QGIS2OllamaMCP](https://github.com/anitagraser/qgis_mcp) | Lets LLMs (via Ollama) drive QGIS Desktop | Python | Anita Graser | community |
+| [qgis_mcp](https://github.com/jjsantos01/qgis_mcp) | Links QGIS Desktop to Claude — project setup, layer management, spatial ops via PyQGIS | Python | jjsantos01 | community |
+| [QgisStreamMCP](https://github.com/nic01asFr/QgisStreamMCP) | Full QGIS Desktop in Docker via noVNC — 1000+ Processing algorithms (Native/GDAL/GRASS/SAGA) | Python | nic01asFr | community |
+
+### General GIS / geoprocessing toolkits
+
+| Server | Description | Lang | By | Type |
+| --- | --- | --- | --- | --- |
+| [gdal-mcp](https://github.com/JordanGunn/gdal-mcp) | GDAL-style raster/vector workflows (Rasterio, GeoPandas, PyProj) — conversion, reprojection, COG, metadata | Python | JordanGunn / Wayfinder-Foundry | community |
+| [geoserver-mcp](https://github.com/mahdin75/geoserver-mcp) | Drives the GeoServer REST API — manage workspaces/layers/styles, CQL spatial queries, WMS/WFS access | Python | mahdin75 | community |
+| [gis-mcp](https://github.com/mahdin75/gis-mcp) | Connects LLMs to core GIS libraries (Shapely, PyProj, GeoPandas, Rasterio, PySAL) for geometry, projections, raster & spatial stats | Python | mahdin75 | community |
+
+### Other (IP geolocation, misc)
+
+| Server | Description | Lang | By | Type |
+| --- | --- | --- | --- | --- |
+| [ipgeolocation-io-mcp](https://github.com/ipgeolocation/ipgeolocation-io-mcp) | Official ipgeolocation.io — IP geolocation, VPN/proxy detection, timezone, astronomy, ASN | — | IPGeolocation.io | official |
+| [IPinfo MCP Server](https://mcp.ipinfo.io/) | Hosted IPinfo MCP — country/continent (free), city/coords/timezone/postal (detailed) | — | IPinfo | official |
+| [mcp-server-ipinfo](https://github.com/briandconnelly/mcp-server-ipinfo) | IP geolocation via the IPInfo API (location + network details) | Python | briandconnelly | community |
+
+<!-- AUTOGEN:END -->

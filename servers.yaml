@@ -1,0 +1,471 @@
+# Geospatial MCP Servers — source of truth
+#
+# This file is the ONLY place to edit server entries. The README.md tables are
+# generated from it by `python scripts/generate_readme.py`.
+#
+# Each entry:
+#   name:        (required) display name
+#   url:         (required) canonical source URL (prefer the GitHub repo)
+#   description: (required) one line, what it does
+#   category:    (required) one of the keys in `categories` below
+#   author:      (optional) person or org
+#   language:    (optional) Python | TypeScript | Go | Rust | ...
+#   official:    (optional, bool) true if vendor/official, false/omitted if community
+#   tags:        (optional) list of freeform keywords
+#   added:       (optional) YYYY-MM-DD you added it
+#   note:        (optional) caveats, e.g. URL needs confirming
+#
+# To add a server: append an entry under `servers:` and run the generator.
+
+categories:
+  geocoding:        "Geocoding & place search"
+  routing:          "Routing, isochrones & navigation"
+  mapping:          "Maps, tiles & commercial platforms"
+  database:         "Spatial databases & analytics"
+  remote_sensing:   "Remote sensing, STAC & earth observation"
+  weather:          "Weather & climate"
+  desktop_gis:      "Desktop & enterprise GIS (QGIS, ArcGIS)"
+  toolkit:          "General GIS / geoprocessing toolkits"
+  data_access:      "Geospatial data access & catalogs"
+  other:            "Other (IP geolocation, misc)"
+
+servers:
+  # ---- General GIS / geoprocessing toolkits ----
+  - name: gis-mcp
+    url: https://github.com/mahdin75/gis-mcp
+    description: Connects LLMs to core GIS libraries (Shapely, PyProj, GeoPandas, Rasterio, PySAL) for geometry, projections, raster & spatial stats
+    category: toolkit
+    author: mahdin75
+    language: Python
+    tags: [shapely, gdal, geopandas, rasterio]
+    added: 2026-08-02
+  - name: gdal-mcp
+    url: https://github.com/JordanGunn/gdal-mcp
+    description: GDAL-style raster/vector workflows (Rasterio, GeoPandas, PyProj) — conversion, reprojection, COG, metadata
+    category: toolkit
+    author: JordanGunn / Wayfinder-Foundry
+    language: Python
+    tags: [gdal, raster, vector, cog]
+    added: 2026-08-02
+  - name: geoserver-mcp
+    url: https://github.com/mahdin75/geoserver-mcp
+    description: Drives the GeoServer REST API — manage workspaces/layers/styles, CQL spatial queries, WMS/WFS access
+    category: toolkit
+    author: mahdin75
+    language: Python
+    tags: [geoserver, ogc, wms, wfs]
+    added: 2026-08-02
+
+  # ---- Desktop & enterprise GIS ----
+  - name: qgis_mcp
+    url: https://github.com/jjsantos01/qgis_mcp
+    description: Links QGIS Desktop to Claude — project setup, layer management, spatial ops via PyQGIS
+    category: desktop_gis
+    author: jjsantos01
+    language: Python
+    tags: [qgis, pyqgis]
+    added: 2026-08-02
+  - name: qgis-mcp (nkarasiak)
+    url: https://github.com/nkarasiak/qgis-mcp
+    description: 117 QGIS tools — layer mgmt, feature editing, processing, styling, layout/atlas, cross-layer SQL
+    category: desktop_gis
+    author: nkarasiak
+    language: Python
+    tags: [qgis]
+    added: 2026-08-02
+  - name: QgisStreamMCP
+    url: https://github.com/nic01asFr/QgisStreamMCP
+    description: Full QGIS Desktop in Docker via noVNC — 1000+ Processing algorithms (Native/GDAL/GRASS/SAGA)
+    category: desktop_gis
+    author: nic01asFr
+    language: Python
+    tags: [qgis, docker, grass, saga]
+    added: 2026-08-02
+  - name: QGIS2OllamaMCP
+    url: https://github.com/anitagraser/qgis_mcp
+    description: Lets LLMs (via Ollama) drive QGIS Desktop
+    category: desktop_gis
+    author: Anita Graser
+    language: Python
+    tags: [qgis, ollama]
+    added: 2026-08-02
+  - name: qgis-mcp-1
+    url: https://github.com/Sir-Adrien-Claudington/qgis-mcp-1
+    description: Fork connecting QGIS to Claude via MCP
+    category: desktop_gis
+    author: Sir-Adrien-Claudington
+    language: Python
+    tags: [qgis, fork]
+    added: 2026-08-02
+  - name: ArcGISMCP
+    url: https://github.com/GarrickGarcia/ArcGISMCP
+    description: Integrates ArcGIS Online — search/query geospatial feature layers
+    category: desktop_gis
+    author: GarrickGarcia
+    language: Python
+    tags: [arcgis, esri]
+    added: 2026-08-02
+  - name: MCP-ArcGISPro
+    url: https://github.com/geo2004/MCP-ArcGISPro
+    description: Control and automate ArcGIS Pro from Claude Desktop
+    category: desktop_gis
+    author: geo2004
+    language: Python
+    tags: [arcgis, arcpy]
+    added: 2026-08-02
+  - name: MCP-Server-ArcGIS-Pro-AddIn
+    url: https://github.com/nicogis/MCP-Server-ArcGIS-Pro-AddIn
+    description: MCP server delivered as an ArcGIS Pro add-in
+    category: desktop_gis
+    author: nicogis
+    language: C#/.NET
+    tags: [arcgis, addin]
+    added: 2026-08-02
+  - name: esri-mcp
+    url: https://github.com/eKerney/esri-mcp
+    description: Query & map Esri Living Atlas data, focus on water resources
+    category: desktop_gis
+    author: eKerney
+    language: Python
+    tags: [esri, living-atlas]
+    added: 2026-08-02
+
+  # ---- Maps, tiles & commercial platforms ----
+  - name: ArcGIS Location Services MCP (beta)
+    url: https://developers.arcgis.com/ai-tools/mcp-arcgis-location-services/
+    description: Official Esri MCP exposing ArcGIS Location Platform services — geocoding, routing, static maps
+    category: mapping
+    author: Esri
+    official: true
+    tags: [arcgis, geocoding, routing]
+    added: 2026-08-02
+  - name: Mapbox MCP Server
+    url: https://github.com/mapbox/mcp-server
+    description: Official Mapbox web services — geocoding, POI search, multimodal routing, matrix, isochrones, static maps
+    category: mapping
+    author: Mapbox
+    language: TypeScript
+    official: true
+    tags: [mapbox, geocoding, routing, tiles]
+    added: 2026-08-02
+  - name: Google Maps MCP (reference)
+    url: https://github.com/modelcontextprotocol/servers
+    description: Reference server — geocoding, places, directions, distance matrix, elevation (now archived)
+    category: mapping
+    author: Anthropic / MCP project
+    language: TypeScript
+    official: true
+    tags: [google-maps, reference, archived]
+    added: 2026-08-02
+  - name: google-maps-mcp-server
+    url: https://github.com/david-pivonka/google-maps-mcp-server
+    description: STDIO server on the new Google Places (New) + Routes APIs
+    category: mapping
+    author: david-pivonka
+    language: TypeScript
+    tags: [google-maps, places, routes]
+    added: 2026-08-02
+  - name: google-maps-places-mcp
+    url: https://github.com/domdomegg/google-maps-places-mcp
+    description: Google Places search + photos
+    category: mapping
+    author: domdomegg
+    language: TypeScript
+    tags: [google-maps, places]
+    added: 2026-08-02
+  - name: mcp-google-map
+    url: https://github.com/cablate/mcp-google-map
+    description: Google Places (New), Routes, geocoding, distance matrix
+    category: mapping
+    author: cablate
+    language: TypeScript
+    tags: [google-maps]
+    added: 2026-08-02
+  - name: baidu-maps/mcp
+    url: https://github.com/baidu-maps/mcp
+    description: Official Baidu Map — geocoding, POI, route planning, weather, IP location, traffic (China)
+    category: mapping
+    author: Baidu
+    language: Python / TypeScript
+    official: true
+    tags: [baidu, china, geocoding, routing]
+    added: 2026-08-02
+  - name: foursquare-places-mcp
+    url: https://github.com/foursquare/foursquare-places-mcp
+    description: Official Foursquare Places API v3 — venue search, place details, location context
+    category: mapping
+    author: Foursquare
+    language: TypeScript
+    official: true
+    tags: [foursquare, places, poi]
+    added: 2026-08-02
+  - name: CARTO MCP Server
+    url: https://docs.carto.com/carto-for-agents/mcp-server
+    description: Remote MCP over CARTO — explore data, render Builder maps inline, run saved spatial Workflows on your cloud warehouse
+    category: mapping
+    author: CARTO
+    official: true
+    tags: [carto, warehouse, hosted]
+    added: 2026-08-02
+  - name: Felt MCP Server
+    url: https://felt.com/blog/introducing-felt-mcp-server
+    description: Remote MCP — create maps, query warehouse, run spatial SQL, style layers, publish live URLs
+    category: mapping
+    author: Felt
+    official: true
+    tags: [felt, hosted, spatial-sql]
+    added: 2026-08-02
+  - name: MapTiler MCP
+    url: https://mcpmarket.com/server/maptiler
+    description: Geocoding, elevation, and mapping APIs as MCP tools
+    category: mapping
+    author: MapTiler
+    official: true
+    tags: [maptiler, tiles, geocoding]
+    added: 2026-08-02
+
+  # ---- Geocoding & place search ----
+  - name: osmmcp
+    url: https://github.com/NERVsystems/osmmcp
+    description: OSM geospatial tools — geocoding, routing, nearby places, neighborhood analysis, EV charging
+    category: geocoding
+    author: NERV Systems
+    language: Go
+    tags: [osm, geocoding, routing]
+    added: 2026-08-02
+  - name: open-streetmap-mcp
+    url: https://github.com/jagan-shanmugam/open-streetmap-mcp
+    description: OSM location services — geocode/reverse, POI, directions, meeting points, neighborhood analysis
+    category: geocoding
+    author: Jagan Shanmugam
+    language: Python
+    tags: [osm, geocoding, poi]
+    added: 2026-08-02
+  - name: openstreetmap-mcp-server
+    url: https://github.com/cyanheads/openstreetmap-mcp-server
+    description: Geocode, reverse geocode, and Overpass spatial queries (STDIO or Streamable HTTP)
+    category: geocoding
+    author: cyanheads
+    language: TypeScript
+    tags: [osm, overpass, geocoding]
+    added: 2026-08-02
+  - name: OSM-GeoJSON-MCP-Server
+    url: https://github.com/shimizu/OSM-GeoJSON-MCP-Server
+    description: Fetches OSM data as GeoJSON via Overpass
+    category: geocoding
+    author: shimizu
+    language: JavaScript
+    tags: [osm, geojson, overpass]
+    added: 2026-08-02
+  - name: mcp-nominatim
+    url: https://github.com/pipeworx-io/mcp-nominatim
+    description: Geocoding / reverse geocoding via OSM Nominatim
+    category: geocoding
+    author: pipeworx-io
+    language: Python
+    tags: [nominatim, osm]
+    added: 2026-08-02
+  - name: MCP-Geo
+    url: https://github.com/webcoderz/MCP-Geo
+    description: Geocoding MCP built on GeoPy — multi-provider (Nominatim, ArcGIS, Bing)
+    category: geocoding
+    author: webcoderz
+    language: Python
+    tags: [geopy, multi-provider]
+    added: 2026-08-02
+  - name: geocode-mcp
+    url: https://github.com/X-McKay/geocode-mcp
+    description: Lat/long for places via free Nominatim, no API key
+    category: geocoding
+    author: X-McKay
+    language: Python
+    tags: [nominatim, geocoding]
+    added: 2026-08-02
+  - name: geocoding-ai/mcp
+    url: https://github.com/geocoding-ai/mcp
+    description: Access to free geocoding
+    category: geocoding
+    author: geocoding-ai
+    tags: [geocoding]
+    added: 2026-08-02
+  - name: what3words MCP
+    url: https://mcpmarket.com/server/what3words
+    description: Convert 3-word addresses to lat/long + bounding box
+    category: geocoding
+    author: Pipeworx (uses what3words API)
+    tags: [what3words, geocoding]
+    added: 2026-08-02
+
+  # ---- Routing ----
+  - name: valhalla-mcp
+    url: https://github.com/aatakansalar/valhalla-mcp
+    description: Valhalla OSM routing engine — routing, isochrones, tiles, matrix
+    category: routing
+    author: Atakan Salar
+    language: TypeScript
+    tags: [valhalla, routing, isochrones]
+    added: 2026-08-02
+
+  # ---- Remote sensing, STAC & earth observation ----
+  - name: planetary-computer-mcp
+    url: https://github.com/isaaccorley/planetary-computer-mcp
+    description: Query & download satellite imagery from the Microsoft Planetary Computer STAC API
+    category: remote_sensing
+    author: Isaac Corley
+    language: Python
+    tags: [planetary-computer, stac, imagery]
+    added: 2026-08-02
+  - name: stac-mcp
+    url: https://github.com/BnJam/stac-mcp
+    description: Natural-language search of any STAC-compliant catalog (defaults to Planetary Computer)
+    category: remote_sensing
+    author: BnJam
+    language: Python
+    tags: [stac, catalog]
+    note: repo URL flagged for confirmation
+    added: 2026-08-02
+  - name: copernicus-mcp
+    url: https://github.com/wb1016/copernicus-mcp
+    description: Access ESA Copernicus OData API — search/download Sentinel-1/2/3/5P/6 imagery
+    category: remote_sensing
+    author: wb1016
+    language: Python
+    tags: [copernicus, sentinel, esa]
+    added: 2026-08-02
+  - name: google-earth-engine-mcp
+    url: https://github.com/cameronking4/google-earth-engine-mcp
+    description: Query Google Earth Engine with natural language — fetch datasets, run tasks, visualize in chat
+    category: remote_sensing
+    author: cameronking4
+    language: TypeScript
+    tags: [earth-engine, gee]
+    added: 2026-08-02
+  - name: Axion-MCP
+    url: https://github.com/Dhenenjay/Axion-MCP
+    description: Earth Engine analysis platform for Claude Desktop — NDVI/NDWI, classification, maps
+    category: remote_sensing
+    author: Dhenenjay
+    language: TypeScript
+    tags: [earth-engine, ndvi]
+    added: 2026-08-02
+  - name: unicef-gee-mcp
+    url: https://github.com/tryolabs/unicef-gee-mcp
+    description: Google Earth Engine access/analysis for UNICEF workflows
+    category: remote_sensing
+    author: Tryolabs (for UNICEF)
+    language: Python
+    tags: [earth-engine, unicef]
+    added: 2026-08-02
+  - name: earthdata-mcp
+    url: https://github.com/nasa/earthdata-mcp
+    description: LLM access to NASA Common Metadata Repository — discover/verify/access Earth science datasets
+    category: remote_sensing
+    author: NASA
+    language: Python
+    official: true
+    tags: [nasa, earthdata, cmr]
+    added: 2026-08-02
+  - name: NASA-MCP-server
+    url: https://github.com/ProgramComputer/NASA-MCP-server
+    description: Standardized interface to many NASA APIs incl. Earth observations & imagery
+    category: remote_sensing
+    author: ProgramComputer
+    language: TypeScript
+    tags: [nasa, imagery]
+    added: 2026-08-02
+  - name: SkyFi MCP
+    url: https://github.com/jpwilson/skyfi-mcp
+    description: Search 150+ satellites from 12+ providers, compare pricing, order archive or tasking imagery in natural language
+    category: remote_sensing
+    author: jpwilson (SkyFi platform)
+    tags: [skyfi, tasking, imagery-marketplace]
+    note: SkyFi launched an official MCP (2026-07-22); this is the most complete community repo — confirm if an official skyfi-org repo is preferred
+    added: 2026-08-02
+
+  # ---- Weather & climate ----
+  - name: weather-mcp
+    url: https://github.com/weather-mcp/weather-mcp
+    description: 17 weather tools — forecasts, alerts, air quality, marine, radar, lightning, rivers, wildfires, history to 1940 (NOAA + Open-Meteo)
+    category: weather
+    author: weather-mcp
+    language: Python
+    tags: [noaa, open-meteo, air-quality]
+    added: 2026-08-02
+  - name: open-meteo-mcp
+    url: https://github.com/cmer81/open-meteo-mcp
+    description: Full Open-Meteo API — forecast, ERA5 archive, air quality, marine, seasonal
+    category: weather
+    author: cmer81
+    language: TypeScript
+    tags: [open-meteo, era5]
+    added: 2026-08-02
+  - name: mcp_weather_server
+    url: https://github.com/isdaniel/mcp_weather_server
+    description: Weather info via the Open-Meteo API
+    category: weather
+    author: isdaniel
+    language: Python
+    tags: [open-meteo]
+    added: 2026-08-02
+  - name: weather-mcp (Fahrenheit)
+    url: https://github.com/FahrenheitResearch/weather-mcp
+    description: 12 tools — NWS data, NWP model imagery, NEXRAD radar, 205 meteorological calculations
+    category: weather
+    author: FahrenheitResearch
+    language: Python
+    tags: [nws, nexrad, radar]
+    added: 2026-08-02
+  - name: nws-mcp-server
+    url: https://github.com/nitvob/nws-mcp-server
+    description: Quickstart NWS server — get-alerts + get-forecast from the National Weather Service
+    category: weather
+    author: nitvob
+    language: TypeScript
+    tags: [nws]
+    added: 2026-08-02
+
+  # ---- Spatial databases & analytics ----
+  - name: postgis-mcp
+    url: https://github.com/receptopalak/postgis-mcp
+    description: PostGIS database connection over MCP — multi-connection via env vars
+    category: database
+    author: receptopalak
+    language: Node.js
+    tags: [postgis, postgres]
+    added: 2026-08-02
+  - name: Wherobots MCP Server
+    url: https://wherobots.com
+    description: Direct access to WherobotsDB (Apache Sedona) — design & run spatial SQL over S3 & Unity Catalog data
+    category: database
+    author: Wherobots
+    language: Python
+    official: true
+    tags: [wherobots, sedona, spatial-sql]
+    note: install docs for Claude Code / OpenCode; confirm canonical repo/doc URL
+    added: 2026-08-02
+
+  # ---- Other (IP geolocation, misc) ----
+  - name: mcp-server-ipinfo
+    url: https://github.com/briandconnelly/mcp-server-ipinfo
+    description: IP geolocation via the IPInfo API (location + network details)
+    category: other
+    author: briandconnelly
+    language: Python
+    tags: [ip-geolocation, ipinfo]
+    added: 2026-08-02
+  - name: ipgeolocation-io-mcp
+    url: https://github.com/ipgeolocation/ipgeolocation-io-mcp
+    description: Official ipgeolocation.io — IP geolocation, VPN/proxy detection, timezone, astronomy, ASN
+    category: other
+    author: IPGeolocation.io
+    official: true
+    tags: [ip-geolocation]
+    added: 2026-08-02
+  - name: IPinfo MCP Server
+    url: https://mcp.ipinfo.io/
+    description: Hosted IPinfo MCP — country/continent (free), city/coords/timezone/postal (detailed)
+    category: other
+    author: IPinfo
+    official: true
+    tags: [ip-geolocation, hosted]
+    added: 2026-08-02
