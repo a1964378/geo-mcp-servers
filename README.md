@@ -29,7 +29,7 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**54 servers tracked** across 10 categories.
+**54 servers tracked** across 9 categories.
 
 ### Categories
 
@@ -37,11 +37,10 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 - [Routing, isochrones & navigation](#routing-isochrones--navigation) (1)
 - [Maps, tiles & commercial platforms](#maps-tiles--commercial-platforms) (11)
 - [Spatial databases & analytics](#spatial-databases--analytics) (2)
-- [Remote sensing, STAC & earth observation](#remote-sensing-stac--earth-observation) (9)
+- [Remote sensing, STAC & earth observation](#remote-sensing-stac--earth-observation) (11)
 - [Weather & climate](#weather--climate) (5)
 - [Desktop & enterprise GIS (QGIS, ArcGIS)](#desktop--enterprise-gis-qgis-arcgis) (9)
 - [General GIS / geoprocessing toolkits](#general-gis--geoprocessing-toolkits) (3)
-- [Geospatial data access & catalogs](#geospatial-data-access--catalogs) (2)
 - [Other (IP geolocation, misc)](#other-ip-geolocation-misc) (3)
 
 ### Geocoding & place search
@@ -91,6 +90,7 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 | Server | Description | Lang | By | Type |
 | --- | --- | --- | --- | --- |
+| [Arraylake MCP Server](https://docs.earthmover.io/mcp/) | Browse Arraylake repos, inspect schemas, run OGC EDR queries & render maps over Zarr/Icechunk scientific arrays | — | Earthmover | official |
 | [Axion-MCP](https://github.com/Dhenenjay/Axion-MCP) | Earth Engine analysis platform for Claude Desktop — NDVI/NDWI, classification, maps | TypeScript | Dhenenjay | community |
 | [copernicus-mcp](https://github.com/wb1016/copernicus-mcp) | Access ESA Copernicus OData API — search/download Sentinel-1/2/3/5P/6 imagery | Python | wb1016 | community |
 | [earthdata-mcp](https://github.com/nasa/earthdata-mcp) | LLM access to NASA Common Metadata Repository — discover/verify/access Earth science datasets | Python | NASA | official |
@@ -99,6 +99,7 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 | [planetary-computer-mcp](https://github.com/isaaccorley/planetary-computer-mcp) | Query & download satellite imagery from the Microsoft Planetary Computer STAC API | Python | Isaac Corley | community |
 | [SkyFi MCP](https://github.com/jpwilson/skyfi-mcp) | Search 150+ satellites from 12+ providers, compare pricing, order archive or tasking imagery in natural language | — | jpwilson (SkyFi platform) | community |
 | [stac-mcp](https://github.com/BnJam/stac-mcp) | Natural-language search of any STAC-compliant catalog (defaults to Planetary Computer) | Python | BnJam | community |
+| [Tilebox MCP Server](https://tilebox.com/blog/grounding-llms-in-live-space-data) | Grounds LLMs in live Tilebox space data — discover datasets, introspect real-time schemas, trigger & inspect EO workflows | — | Tilebox | official |
 | [unicef-gee-mcp](https://github.com/tryolabs/unicef-gee-mcp) | Google Earth Engine access/analysis for UNICEF workflows | Python | Tryolabs (for UNICEF) | community |
 
 ### Weather & climate
@@ -132,13 +133,6 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 | [gdal-mcp](https://github.com/JordanGunn/gdal-mcp) | GDAL-style raster/vector workflows (Rasterio, GeoPandas, PyProj) — conversion, reprojection, COG, metadata | Python | JordanGunn / Wayfinder-Foundry | community |
 | [geoserver-mcp](https://github.com/mahdin75/geoserver-mcp) | Drives the GeoServer REST API — manage workspaces/layers/styles, CQL spatial queries, WMS/WFS access | Python | mahdin75 | community |
 | [gis-mcp](https://github.com/mahdin75/gis-mcp) | Connects LLMs to core GIS libraries (Shapely, PyProj, GeoPandas, Rasterio, PySAL) for geometry, projections, raster & spatial stats | Python | mahdin75 | community |
-
-### Geospatial data access & catalogs
-
-| Server | Description | Lang | By | Type |
-| --- | --- | --- | --- | --- |
-| [Arraylake MCP Server](https://docs.earthmover.io/mcp/) | Browse Arraylake repos, inspect schemas, run OGC EDR queries & render maps over Zarr/Icechunk scientific arrays | — | Earthmover | official |
-| [Tilebox MCP Server](https://tilebox.com/blog/grounding-llms-in-live-space-data) | Grounds LLMs in live Tilebox space data — discover datasets, introspect real-time schemas, trigger & inspect EO workflows | — | Tilebox | official |
 
 ### Other (IP geolocation, misc)
 
