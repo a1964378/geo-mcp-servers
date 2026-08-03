@@ -29,7 +29,7 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**55 servers tracked** across 9 categories.
+**56 servers tracked** across 9 categories.
 
 ### Categories
 
@@ -38,7 +38,7 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 - [Maps, tiles & commercial platforms](#maps-tiles--commercial-platforms) (12)
 - [Spatial databases & analytics](#spatial-databases--analytics) (2)
 - [Remote sensing, STAC & earth observation](#remote-sensing-stac--earth-observation) (11)
-- [Weather & climate](#weather--climate) (5)
+- [Weather & climate](#weather--climate) (6)
 - [Desktop & enterprise GIS (QGIS, ArcGIS)](#desktop--enterprise-gis-qgis-arcgis) (9)
 - [General GIS / geoprocessing toolkits](#general-gis--geoprocessing-toolkits) (3)
 - [Other (IP geolocation, misc)](#other-ip-geolocation-misc) (3)
@@ -107,6 +107,7 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 | Server | Description | Lang | By | Type |
 | --- | --- | --- | --- | --- |
+| [dynamical.org Weather & Climate Catalog](https://mcp.dynamical.org/mcp) | Hosted server over dynamical.org's open STAC catalog of cloud-optimized weather & climate archives and forecasts (GFS, HRRR, ECMWF/AIFS) — dataset search & docs, ready-to-run xarray/Zarr/Icechunk snippets, forecast-run freshness | Python | dynamical.org | official |
 | [mcp_weather_server](https://github.com/isdaniel/mcp_weather_server) | Weather info via the Open-Meteo API | Python | isdaniel | community |
 | [nws-mcp-server](https://github.com/nitvob/nws-mcp-server) | Quickstart NWS server — get-alerts + get-forecast from the National Weather Service | TypeScript | nitvob | community |
 | [open-meteo-mcp](https://github.com/cmer81/open-meteo-mcp) | Full Open-Meteo API — forecast, ERA5 archive, air quality, marine, seasonal | TypeScript | cmer81 | community |

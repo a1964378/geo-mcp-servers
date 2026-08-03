@@ -450,6 +450,16 @@ servers:
     language: TypeScript
     tags: [nws]
     added: 2026-08-02
+  - name: dynamical.org Weather & Climate Catalog
+    url: https://mcp.dynamical.org/mcp
+    description: Hosted server over dynamical.org's open STAC catalog of cloud-optimized weather & climate archives and forecasts (GFS, HRRR, ECMWF/AIFS) — dataset search & docs, ready-to-run xarray/Zarr/Icechunk snippets, forecast-run freshness
+    category: weather
+    author: dynamical.org
+    language: Python
+    official: true
+    tags: [stac, zarr, icechunk, forecast, gfs, hrrr, ecmwf, hosted]
+    note: streamable-HTTP remote, no auth; listed in the official MCP registry as io.github.dynamical-org/mcp
+    added: 2026-08-03
 
   # ---- Spatial databases & analytics ----
   - name: postgis-mcp
