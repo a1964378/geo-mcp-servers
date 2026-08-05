@@ -21,7 +21,7 @@ The tables below are **generated** from [`servers.yaml`](servers.yaml) — the s
 This repo ships a [Claude Code](https://claude.com/claude-code) skill in [`skill/`](skill/) that searches/recommends servers from the catalog and adds new ones. Install it by symlinking into your skills directory (the skill resolves the repo location from this symlink — no hard-coded paths):
 
 ```bash
-git clone https://github.com/<owner>/geo-mcp-servers.git
+git clone https://github.com/sparkgeo/geo-mcp-servers.git
 ln -sfn "$(pwd)/geo-mcp-servers/skill" ~/.claude/skills/geo-mcp-servers
 ```
 
