@@ -29,7 +29,7 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**76 servers tracked** across 10 categories.
+**77 servers tracked** across 10 categories.
 
 ### Categories
 
@@ -38,7 +38,7 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 - [Maps, tiles & commercial platforms](#maps-tiles--commercial-platforms) (15)
 - [Spatial databases & analytics](#spatial-databases--analytics) (3)
 - [Remote sensing, STAC & earth observation](#remote-sensing-stac--earth-observation) (13)
-- [Weather & climate](#weather--climate) (10)
+- [Weather & climate](#weather--climate) (11)
 - [Desktop & enterprise GIS (QGIS, ArcGIS)](#desktop--enterprise-gis-qgis-arcgis) (9)
 - [General GIS / geoprocessing toolkits](#general-gis--geoprocessing-toolkits) (3)
 - [Aviation & maritime tracking (ADS-B, AIS)](#aviation--maritime-tracking-ads-b-ais) (5)
@@ -110,7 +110,7 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 | [planetary-computer-mcp](https://github.com/isaaccorley/planetary-computer-mcp) | Query & download satellite imagery from the Microsoft Planetary Computer STAC API | Python | Isaac Corley | community |
 | [SkyFi MCP](https://github.com/jpwilson/skyfi-mcp) | Search 150+ satellites from 12+ providers, compare pricing, order archive or tasking imagery in natural language | — | jpwilson (SkyFi platform) | community |
 | [stac-mcp](https://github.com/BnJam/stac-mcp) | Natural-language search of any STAC-compliant catalog (defaults to Planetary Computer) | Python | BnJam | community |
-| [Tilebox MCP Server](https://tilebox.com/blog/grounding-llms-in-live-space-data) | Grounds LLMs in live Tilebox space data — discover datasets, introspect real-time schemas, trigger & inspect EO workflows | — | Tilebox | official |
+| [Tilebox MCP Server](https://docs.tilebox.com/onboard-your-agent) | Create and manage geospatial datasets and distributed workflows, with docs search + CLI and Skills for coding agents | Python / Go | Tilebox | official |
 | [unicef-gee-mcp](https://github.com/tryolabs/unicef-gee-mcp) | Google Earth Engine access/analysis for UNICEF workflows | Python | Tryolabs (for UNICEF) | community |
 
 ### Weather & climate
@@ -118,6 +118,7 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 | Server | Description | Lang | By | Type |
 | --- | --- | --- | --- | --- |
 | [aqicn-mcp](https://github.com/mattmarcin/aqicn-mcp) | Real-time air quality from the World Air Quality Index (AQICN) by city or coordinates | — | mattmarcin | community |
+| [dynamical.org Weather & Climate Catalog](https://github.com/dynamical-org/mcp) | Hosted server over dynamical.org's open STAC catalog of cloud-optimized weather & climate archives and forecasts (GFS, HRRR, ECMWF/AIFS) — dataset search & docs, ready-to-run xarray/Zarr/Icechunk snippets, forecast-run freshness | Python | dynamical.org | official |
 | [mcp_weather_server](https://github.com/isdaniel/mcp_weather_server) | Weather info via the Open-Meteo API | Python | isdaniel | community |
 | [NOAA Marine MCP Server](https://github.com/cyanheads/noaa-marine-mcp-server) | NOAA CO-OPS tide stations + NDBC buoys — tide predictions, water levels, tidal currents, live buoy conditions | — | cyanheads | community |
 | [NOAA-TidesAndCurrents-MCP](https://github.com/RyanCardin15/NOAA-TidesAndCurrents-MCP) | NOAA Data/Metadata/Derived-Products APIs for tides and currents | TypeScript | RyanCardin15 | community |

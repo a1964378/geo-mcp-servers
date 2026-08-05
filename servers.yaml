@@ -386,13 +386,13 @@ servers:
     note: SkyFi launched an official MCP (2026-07-22); this is the most complete community repo — confirm if an official skyfi-org repo is preferred
     added: 2026-08-02
   - name: Tilebox MCP Server
-    url: https://tilebox.com/blog/grounding-llms-in-live-space-data
-    description: Grounds LLMs in live Tilebox space data — discover datasets, introspect real-time schemas, trigger & inspect EO workflows
+    url: https://docs.tilebox.com/onboard-your-agent
+    description: Create and manage geospatial datasets and distributed workflows, with docs search + CLI and Skills for coding agents
     category: remote_sensing
     author: Tilebox
+    language: Python / Go
     official: true
-    tags: [tilebox, earth-observation, workflows, schemas]
-    note: part of the Tilebox platform/CLI (no standalone public repo); prefer a docs.tilebox.com MCP URL once confirmed
+    tags: [tilebox, earth-observation, datasets, workflows, schemas, cli, agent-skills]
     added: 2026-08-02
   - name: Arraylake MCP Server
     url: https://docs.earthmover.io/mcp/
@@ -444,6 +444,16 @@ servers:
     language: TypeScript
     tags: [nws]
     added: 2026-08-02
+  - name: dynamical.org Weather & Climate Catalog
+    url: https://github.com/dynamical-org/mcp
+    description: Hosted server over dynamical.org's open STAC catalog of cloud-optimized weather & climate archives and forecasts (GFS, HRRR, ECMWF/AIFS) — dataset search & docs, ready-to-run xarray/Zarr/Icechunk snippets, forecast-run freshness
+    category: weather
+    author: dynamical.org
+    language: Python
+    official: true
+    tags: [stac, zarr, icechunk, forecast, gfs, hrrr, ecmwf, hosted]
+    note: hosted streamable-HTTP remote at https://mcp.dynamical.org/mcp, no auth; in the official MCP registry as io.github.dynamical-org/mcp
+    added: 2026-08-03
 
   # ---- Spatial databases & analytics ----
   - name: postgis-mcp
