@@ -27,6 +27,7 @@ categories:
   desktop_gis:      "Desktop & enterprise GIS (QGIS, ArcGIS)"
   toolkit:          "General GIS / geoprocessing toolkits"
   data_access:      "Geospatial data access & catalogs"
+  tracking:         "Aviation & maritime tracking (ADS-B, AIS)"
   other:            "Other (IP geolocation, misc)"
 
 servers:
@@ -226,12 +227,12 @@ servers:
     tags: [felt, hosted, spatial-sql]
     added: 2026-08-02
   - name: MapTiler MCP
-    url: https://mcpmarket.com/server/maptiler
-    description: Geocoding, elevation, and mapping APIs as MCP tools
+    url: https://github.com/pipeworx-io/mcp-maptiler
+    description: MapTiler geocoding, elevation and mapping APIs as MCP tools
     category: mapping
-    author: MapTiler
-    official: true
+    author: Pipeworx (uses MapTiler API)
     tags: [maptiler, tiles, geocoding]
+    note: community Pipeworx-gateway wrapper — no official MapTiler-published server found
     added: 2026-08-02
 
   # ---- Geocoding & place search ----
@@ -291,15 +292,8 @@ servers:
     language: Python
     tags: [nominatim, geocoding]
     added: 2026-08-02
-  - name: geocoding-ai/mcp
-    url: https://github.com/geocoding-ai/mcp
-    description: Access to free geocoding
-    category: geocoding
-    author: geocoding-ai
-    tags: [geocoding]
-    added: 2026-08-02
   - name: what3words MCP
-    url: https://mcpmarket.com/server/what3words
+    url: https://github.com/pipeworx-io/mcp-what3words
     description: Convert 3-word addresses to lat/long + bounding box
     category: geocoding
     author: Pipeworx (uses what3words API)
@@ -496,3 +490,189 @@ servers:
     official: true
     tags: [ip-geolocation, hosted]
     added: 2026-08-02
+
+  # ==== Added 2026-08-05 (discovery sweep + liveness-verified) ================
+  # ---- Geocoding & place search ----
+  - name: HERE Maps MCP Server
+    url: https://github.com/limingchina/heremaps-mcp-server
+    description: HERE Platform geocoding, reverse geocoding, routing, places search & traffic
+    category: geocoding
+    author: limingchina
+    language: TypeScript
+    tags: [here, geocoding, routing, traffic]
+    added: 2026-08-05
+  - name: OpenCage Geocoding MCP
+    url: https://github.com/OpenCageData/opencage-geocoding-mcp
+    description: Forward/reverse geocoding via the OpenCage API, plus API-status/quota checks
+    category: geocoding
+    author: OpenCage
+    language: TypeScript
+    official: true
+    tags: [opencage, geocoding]
+    added: 2026-08-05
+  - name: Geoapify MCP Server
+    url: https://github.com/OriShmila/geoapify-mcp-server
+    description: Geoapify geocoding, reverse geocoding, places, routing, isolines & travel-time
+    category: geocoding
+    author: OriShmila
+    language: Python
+    tags: [geoapify, geocoding, routing, isolines]
+    added: 2026-08-05
+  - name: Smarty MCP Server
+    url: https://www.smarty.com/docs/mcp
+    description: 20 tools for US/international address verification, ZIP lookup, reverse geocoding & property/census enrichment
+    category: geocoding
+    author: Smarty
+    official: true
+    tags: [smarty, address-validation, enrichment, hosted]
+    added: 2026-08-05
+
+  # ---- Maps, tiles & commercial platforms ----
+  - name: TomTom Maps MCP Server
+    url: https://github.com/tomtom-international/tomtom-maps-mcp
+    description: Official TomTom location services — search, geocoding, routing, traffic
+    category: mapping
+    author: TomTom
+    language: TypeScript
+    official: true
+    tags: [tomtom, geocoding, routing, traffic]
+    added: 2026-08-05
+  - name: TomTom Traffic Analytics MCP
+    url: https://github.com/tomtom-international/tomtom-traffic-analytics-mcp
+    description: TomTom MOVE traffic analytics — past, present & predicted traffic
+    category: mapping
+    author: TomTom
+    official: true
+    tags: [tomtom, traffic, analytics]
+    added: 2026-08-05
+  - name: ArcGIS Location Services MCP (community)
+    url: https://github.com/lwsinclair/arcgis-location-services-mcp
+    description: Community wrapper over the Esri ArcGIS Location Platform — geocoding, routing, places
+    category: mapping
+    author: lwsinclair
+    tags: [arcgis, esri, geocoding, routing]
+    added: 2026-08-05
+
+  # ---- Spatial databases & analytics ----
+  - name: Overture Maps MCP Server
+    url: https://github.com/srivinod1/overture-mcp-server
+    description: Query Overture Maps GeoParquet directly from S3 via DuckDB spatial — buildings, place density, land-use analytics
+    category: database
+    author: srivinod1
+    language: Python
+    tags: [overture, duckdb, geoparquet, s3]
+    added: 2026-08-05
+
+  # ---- Remote sensing, STAC & earth observation ----
+  - name: Planet MCP Server (beta)
+    url: https://community.planet.com/product-updates/beta-planet-mcp-server-for-ai-agents-6403
+    description: Natural-language search/preview/order over the Planet Insights Platform Data API using existing Planet SDK creds
+    category: remote_sensing
+    author: Planet Labs
+    official: true
+    tags: [planet, imagery, tasking]
+    added: 2026-08-05
+  - name: Microsoft Planetary Computer Pro MCP Tools
+    url: https://techcommunity.microsoft.com/blog/microsoft-planetary-computer-blog/introducing-microsoft-planetary-computer-pro-model-context-protocol-tools-on-vs-/4522346
+    description: 35+ tools connecting Planetary Computer + Planetary Computer Pro, shipped for VS Code / Copilot
+    category: remote_sensing
+    author: Microsoft
+    official: true
+    tags: [planetary-computer, stac, microsoft]
+    added: 2026-08-05
+
+  # ---- Weather & climate (incl. air quality, tides) ----
+  - name: open-meteo-mcp-server (cyanheads)
+    url: https://github.com/cyanheads/open-meteo-mcp-server
+    description: Open-Meteo forecasts + geocoding, ERA5 historical climate, marine, air quality & terrain elevation
+    category: weather
+    author: cyanheads
+    language: TypeScript
+    tags: [open-meteo, era5, air-quality, elevation]
+    added: 2026-08-05
+  - name: OpenAQ MCP Server
+    url: https://github.com/cyanheads/openaq-mcp-server
+    description: Global air-quality stations & pollutant observations (PM2.5, PM10, O3, NO2, SO2, CO) via OpenAQ v3, with SQL over history
+    category: weather
+    author: cyanheads
+    tags: [openaq, air-quality]
+    added: 2026-08-05
+  - name: aqicn-mcp
+    url: https://github.com/mattmarcin/aqicn-mcp
+    description: Real-time air quality from the World Air Quality Index (AQICN) by city or coordinates
+    category: weather
+    author: mattmarcin
+    tags: [aqicn, air-quality]
+    added: 2026-08-05
+  - name: NOAA Marine MCP Server
+    url: https://github.com/cyanheads/noaa-marine-mcp-server
+    description: NOAA CO-OPS tide stations + NDBC buoys — tide predictions, water levels, tidal currents, live buoy conditions
+    category: weather
+    author: cyanheads
+    tags: [noaa, tides, buoys, marine]
+    added: 2026-08-05
+  - name: NOAA-TidesAndCurrents-MCP
+    url: https://github.com/RyanCardin15/NOAA-TidesAndCurrents-MCP
+    description: NOAA Data/Metadata/Derived-Products APIs for tides and currents
+    category: weather
+    author: RyanCardin15
+    language: TypeScript
+    tags: [noaa, tides, currents]
+    added: 2026-08-05
+
+  # ---- Aviation & maritime tracking ----
+  - name: ADS-B MCP Server
+    url: https://github.com/dirkhh/adsb-mcp-server
+    description: Exposes a local ADS-B feeder (readsb/tar1090) — aircraft positions, callsigns, altitudes, routes
+    category: tracking
+    author: dirkhh
+    language: Python
+    tags: [adsb, aviation, aircraft]
+    added: 2026-08-05
+  - name: Flightradar24 API MCP
+    url: https://github.com/Flightradar24/fr24api-mcp
+    description: Official Flightradar24 flight-tracking API access
+    category: tracking
+    author: Flightradar24
+    official: true
+    tags: [flightradar24, aviation, flights]
+    added: 2026-08-05
+  - name: Vessel Traffic MCP
+    url: https://github.com/tools-mcp/vessel-traffic-mcp
+    description: Read-only vessel identity, AIS-style positions/tracks, port calls & schedules (BYOK maritime providers)
+    category: tracking
+    author: tools-mcp
+    tags: [ais, vessels, maritime]
+    added: 2026-08-05
+  - name: MarineTraffic MCP Server
+    url: https://github.com/Cyreslab-AI/marinetraffic-mcp-server
+    description: Vessel positions/details, search & vessels-in-area via MarineTraffic
+    category: tracking
+    author: Cyreslab-AI
+    tags: [marinetraffic, ais, vessels]
+    added: 2026-08-05
+  - name: SignalK MCP Server
+    url: https://signalk.org/2025/introducing-signalk-mcp-server-ai-powered-marine-data-access/
+    description: Conversational access to live boat/marine sensor data over Signal K
+    category: tracking
+    author: Signal K project
+    tags: [signalk, marine, sensors]
+    added: 2026-08-05
+
+  # ---- Other ----
+  - name: Regrid MCP Server
+    url: https://regrid.com/mcp
+    description: 160M+ US/Canada land parcels — query by location, zoning, acreage, ownership & building criteria
+    category: other
+    author: Regrid
+    official: true
+    tags: [regrid, parcels, cadastral, hosted]
+    added: 2026-08-05
+  - name: TimezoneToolkit
+    url: https://github.com/Cicatriiz/timezone-toolkit
+    description: Timezone conversion plus sunrise/sunset/twilight from lat/long
+    category: other
+    author: Cicatriiz
+    language: TypeScript
+    tags: [timezone, sun, coordinates]
+    added: 2026-08-05

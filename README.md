@@ -29,33 +29,37 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**55 servers tracked** across 9 categories.
+**76 servers tracked** across 10 categories.
 
 ### Categories
 
-- [Geocoding & place search](#geocoding--place-search) (9)
+- [Geocoding & place search](#geocoding--place-search) (12)
 - [Routing, isochrones & navigation](#routing-isochrones--navigation) (1)
-- [Maps, tiles & commercial platforms](#maps-tiles--commercial-platforms) (12)
-- [Spatial databases & analytics](#spatial-databases--analytics) (2)
-- [Remote sensing, STAC & earth observation](#remote-sensing-stac--earth-observation) (11)
-- [Weather & climate](#weather--climate) (5)
+- [Maps, tiles & commercial platforms](#maps-tiles--commercial-platforms) (15)
+- [Spatial databases & analytics](#spatial-databases--analytics) (3)
+- [Remote sensing, STAC & earth observation](#remote-sensing-stac--earth-observation) (13)
+- [Weather & climate](#weather--climate) (10)
 - [Desktop & enterprise GIS (QGIS, ArcGIS)](#desktop--enterprise-gis-qgis-arcgis) (9)
 - [General GIS / geoprocessing toolkits](#general-gis--geoprocessing-toolkits) (3)
-- [Other (IP geolocation, misc)](#other-ip-geolocation-misc) (3)
+- [Aviation & maritime tracking (ADS-B, AIS)](#aviation--maritime-tracking-ads-b-ais) (5)
+- [Other (IP geolocation, misc)](#other-ip-geolocation-misc) (5)
 
 ### Geocoding & place search
 
 | Server | Description | Lang | By | Type |
 | --- | --- | --- | --- | --- |
+| [Geoapify MCP Server](https://github.com/OriShmila/geoapify-mcp-server) | Geoapify geocoding, reverse geocoding, places, routing, isolines & travel-time | Python | OriShmila | community |
 | [geocode-mcp](https://github.com/X-McKay/geocode-mcp) | Lat/long for places via free Nominatim, no API key | Python | X-McKay | community |
-| [geocoding-ai/mcp](https://github.com/geocoding-ai/mcp) | Access to free geocoding | — | geocoding-ai | community |
+| [HERE Maps MCP Server](https://github.com/limingchina/heremaps-mcp-server) | HERE Platform geocoding, reverse geocoding, routing, places search & traffic | TypeScript | limingchina | community |
 | [MCP-Geo](https://github.com/webcoderz/MCP-Geo) | Geocoding MCP built on GeoPy — multi-provider (Nominatim, ArcGIS, Bing) | Python | webcoderz | community |
 | [mcp-nominatim](https://github.com/pipeworx-io/mcp-nominatim) | Geocoding / reverse geocoding via OSM Nominatim | Python | pipeworx-io | community |
 | [open-streetmap-mcp](https://github.com/jagan-shanmugam/open-streetmap-mcp) | OSM location services — geocode/reverse, POI, directions, meeting points, neighborhood analysis | Python | Jagan Shanmugam | community |
+| [OpenCage Geocoding MCP](https://github.com/OpenCageData/opencage-geocoding-mcp) | Forward/reverse geocoding via the OpenCage API, plus API-status/quota checks | TypeScript | OpenCage | official |
 | [openstreetmap-mcp-server](https://github.com/cyanheads/openstreetmap-mcp-server) | Geocode, reverse geocode, and Overpass spatial queries (STDIO or Streamable HTTP) | TypeScript | cyanheads | community |
 | [OSM-GeoJSON-MCP-Server](https://github.com/shimizu/OSM-GeoJSON-MCP-Server) | Fetches OSM data as GeoJSON via Overpass | JavaScript | shimizu | community |
 | [osmmcp](https://github.com/NERVsystems/osmmcp) | OSM geospatial tools — geocoding, routing, nearby places, neighborhood analysis, EV charging | Go | NERV Systems | community |
-| [what3words MCP](https://mcpmarket.com/server/what3words) | Convert 3-word addresses to lat/long + bounding box | — | Pipeworx (uses what3words API) | community |
+| [Smarty MCP Server](https://www.smarty.com/docs/mcp) | 20 tools for US/international address verification, ZIP lookup, reverse geocoding & property/census enrichment | — | Smarty | official |
+| [what3words MCP](https://github.com/pipeworx-io/mcp-what3words) | Convert 3-word addresses to lat/long + bounding box | — | Pipeworx (uses what3words API) | community |
 
 ### Routing, isochrones & navigation
 
@@ -68,6 +72,7 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 | Server | Description | Lang | By | Type |
 | --- | --- | --- | --- | --- |
 | [ArcGIS Location Services MCP (beta)](https://developers.arcgis.com/ai-tools/mcp-arcgis-location-services/) | Official Esri MCP exposing ArcGIS Location Platform services — geocoding, routing, static maps | — | Esri | official |
+| [ArcGIS Location Services MCP (community)](https://github.com/lwsinclair/arcgis-location-services-mcp) | Community wrapper over the Esri ArcGIS Location Platform — geocoding, routing, places | — | lwsinclair | community |
 | [baidu-maps/mcp](https://github.com/baidu-maps/mcp) | Official Baidu Map — geocoding, POI, route planning, weather, IP location, traffic (China) | Python / TypeScript | Baidu | official |
 | [CARTO MCP Server](https://docs.carto.com/carto-for-agents/mcp-server) | Remote MCP over CARTO — explore data, render Builder maps inline, run saved spatial Workflows on your cloud warehouse | — | CARTO | official |
 | [Cesium AI Integrations](https://github.com/CesiumGS/cesium-ai-integrations) | Official Cesium MCP servers & agent skills connecting the Cesium 3D geospatial ecosystem (CesiumJS, 3D Tiles) to AI assistants | TypeScript | Cesium (CesiumGS) | official |
@@ -77,13 +82,16 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 | [google-maps-mcp-server](https://github.com/david-pivonka/google-maps-mcp-server) | STDIO server on the new Google Places (New) + Routes APIs | TypeScript | david-pivonka | community |
 | [google-maps-places-mcp](https://github.com/domdomegg/google-maps-places-mcp) | Google Places search + photos | TypeScript | domdomegg | community |
 | [Mapbox MCP Server](https://github.com/mapbox/mcp-server) | Official Mapbox web services — geocoding, POI search, multimodal routing, matrix, isochrones, static maps | TypeScript | Mapbox | official |
-| [MapTiler MCP](https://mcpmarket.com/server/maptiler) | Geocoding, elevation, and mapping APIs as MCP tools | — | MapTiler | official |
+| [MapTiler MCP](https://github.com/pipeworx-io/mcp-maptiler) | MapTiler geocoding, elevation and mapping APIs as MCP tools | — | Pipeworx (uses MapTiler API) | community |
 | [mcp-google-map](https://github.com/cablate/mcp-google-map) | Google Places (New), Routes, geocoding, distance matrix | TypeScript | cablate | community |
+| [TomTom Maps MCP Server](https://github.com/tomtom-international/tomtom-maps-mcp) | Official TomTom location services — search, geocoding, routing, traffic | TypeScript | TomTom | official |
+| [TomTom Traffic Analytics MCP](https://github.com/tomtom-international/tomtom-traffic-analytics-mcp) | TomTom MOVE traffic analytics — past, present & predicted traffic | — | TomTom | official |
 
 ### Spatial databases & analytics
 
 | Server | Description | Lang | By | Type |
 | --- | --- | --- | --- | --- |
+| [Overture Maps MCP Server](https://github.com/srivinod1/overture-mcp-server) | Query Overture Maps GeoParquet directly from S3 via DuckDB spatial — buildings, place density, land-use analytics | Python | srivinod1 | community |
 | [postgis-mcp](https://github.com/receptopalak/postgis-mcp) | PostGIS database connection over MCP — multi-connection via env vars | Node.js | receptopalak | community |
 | [Wherobots MCP Server](https://wherobots.com) | Direct access to WherobotsDB (Apache Sedona) — design & run spatial SQL over S3 & Unity Catalog data | Python | Wherobots | official |
 
@@ -96,7 +104,9 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 | [copernicus-mcp](https://github.com/wb1016/copernicus-mcp) | Access ESA Copernicus OData API — search/download Sentinel-1/2/3/5P/6 imagery | Python | wb1016 | community |
 | [earthdata-mcp](https://github.com/nasa/earthdata-mcp) | LLM access to NASA Common Metadata Repository — discover/verify/access Earth science datasets | Python | NASA | official |
 | [google-earth-engine-mcp](https://github.com/cameronking4/google-earth-engine-mcp) | Query Google Earth Engine with natural language — fetch datasets, run tasks, visualize in chat | TypeScript | cameronking4 | community |
+| [Microsoft Planetary Computer Pro MCP Tools](https://techcommunity.microsoft.com/blog/microsoft-planetary-computer-blog/introducing-microsoft-planetary-computer-pro-model-context-protocol-tools-on-vs-/4522346) | 35+ tools connecting Planetary Computer + Planetary Computer Pro, shipped for VS Code / Copilot | — | Microsoft | official |
 | [NASA-MCP-server](https://github.com/ProgramComputer/NASA-MCP-server) | Standardized interface to many NASA APIs incl. Earth observations & imagery | TypeScript | ProgramComputer | community |
+| [Planet MCP Server (beta)](https://community.planet.com/product-updates/beta-planet-mcp-server-for-ai-agents-6403) | Natural-language search/preview/order over the Planet Insights Platform Data API using existing Planet SDK creds | — | Planet Labs | official |
 | [planetary-computer-mcp](https://github.com/isaaccorley/planetary-computer-mcp) | Query & download satellite imagery from the Microsoft Planetary Computer STAC API | Python | Isaac Corley | community |
 | [SkyFi MCP](https://github.com/jpwilson/skyfi-mcp) | Search 150+ satellites from 12+ providers, compare pricing, order archive or tasking imagery in natural language | — | jpwilson (SkyFi platform) | community |
 | [stac-mcp](https://github.com/BnJam/stac-mcp) | Natural-language search of any STAC-compliant catalog (defaults to Planetary Computer) | Python | BnJam | community |
@@ -107,9 +117,14 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 | Server | Description | Lang | By | Type |
 | --- | --- | --- | --- | --- |
+| [aqicn-mcp](https://github.com/mattmarcin/aqicn-mcp) | Real-time air quality from the World Air Quality Index (AQICN) by city or coordinates | — | mattmarcin | community |
 | [mcp_weather_server](https://github.com/isdaniel/mcp_weather_server) | Weather info via the Open-Meteo API | Python | isdaniel | community |
+| [NOAA Marine MCP Server](https://github.com/cyanheads/noaa-marine-mcp-server) | NOAA CO-OPS tide stations + NDBC buoys — tide predictions, water levels, tidal currents, live buoy conditions | — | cyanheads | community |
+| [NOAA-TidesAndCurrents-MCP](https://github.com/RyanCardin15/NOAA-TidesAndCurrents-MCP) | NOAA Data/Metadata/Derived-Products APIs for tides and currents | TypeScript | RyanCardin15 | community |
 | [nws-mcp-server](https://github.com/nitvob/nws-mcp-server) | Quickstart NWS server — get-alerts + get-forecast from the National Weather Service | TypeScript | nitvob | community |
 | [open-meteo-mcp](https://github.com/cmer81/open-meteo-mcp) | Full Open-Meteo API — forecast, ERA5 archive, air quality, marine, seasonal | TypeScript | cmer81 | community |
+| [open-meteo-mcp-server (cyanheads)](https://github.com/cyanheads/open-meteo-mcp-server) | Open-Meteo forecasts + geocoding, ERA5 historical climate, marine, air quality & terrain elevation | TypeScript | cyanheads | community |
+| [OpenAQ MCP Server](https://github.com/cyanheads/openaq-mcp-server) | Global air-quality stations & pollutant observations (PM2.5, PM10, O3, NO2, SO2, CO) via OpenAQ v3, with SQL over history | — | cyanheads | community |
 | [weather-mcp](https://github.com/weather-mcp/weather-mcp) | 17 weather tools — forecasts, alerts, air quality, marine, radar, lightning, rivers, wildfires, history to 1940 (NOAA + Open-Meteo) | Python | weather-mcp | community |
 | [weather-mcp (Fahrenheit)](https://github.com/FahrenheitResearch/weather-mcp) | 12 tools — NWS data, NWP model imagery, NEXRAD radar, 205 meteorological calculations | Python | FahrenheitResearch | community |
 
@@ -135,6 +150,16 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 | [geoserver-mcp](https://github.com/mahdin75/geoserver-mcp) | Drives the GeoServer REST API — manage workspaces/layers/styles, CQL spatial queries, WMS/WFS access | Python | mahdin75 | community |
 | [gis-mcp](https://github.com/mahdin75/gis-mcp) | Connects LLMs to core GIS libraries (Shapely, PyProj, GeoPandas, Rasterio, PySAL) for geometry, projections, raster & spatial stats | Python | mahdin75 | community |
 
+### Aviation & maritime tracking (ADS-B, AIS)
+
+| Server | Description | Lang | By | Type |
+| --- | --- | --- | --- | --- |
+| [ADS-B MCP Server](https://github.com/dirkhh/adsb-mcp-server) | Exposes a local ADS-B feeder (readsb/tar1090) — aircraft positions, callsigns, altitudes, routes | Python | dirkhh | community |
+| [Flightradar24 API MCP](https://github.com/Flightradar24/fr24api-mcp) | Official Flightradar24 flight-tracking API access | — | Flightradar24 | official |
+| [MarineTraffic MCP Server](https://github.com/Cyreslab-AI/marinetraffic-mcp-server) | Vessel positions/details, search & vessels-in-area via MarineTraffic | — | Cyreslab-AI | community |
+| [SignalK MCP Server](https://signalk.org/2025/introducing-signalk-mcp-server-ai-powered-marine-data-access/) | Conversational access to live boat/marine sensor data over Signal K | — | Signal K project | community |
+| [Vessel Traffic MCP](https://github.com/tools-mcp/vessel-traffic-mcp) | Read-only vessel identity, AIS-style positions/tracks, port calls & schedules (BYOK maritime providers) | — | tools-mcp | community |
+
 ### Other (IP geolocation, misc)
 
 | Server | Description | Lang | By | Type |
@@ -142,5 +167,7 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 | [ipgeolocation-io-mcp](https://github.com/ipgeolocation/ipgeolocation-io-mcp) | Official ipgeolocation.io — IP geolocation, VPN/proxy detection, timezone, astronomy, ASN | — | IPGeolocation.io | official |
 | [IPinfo MCP Server](https://mcp.ipinfo.io/) | Hosted IPinfo MCP — country/continent (free), city/coords/timezone/postal (detailed) | — | IPinfo | official |
 | [mcp-server-ipinfo](https://github.com/briandconnelly/mcp-server-ipinfo) | IP geolocation via the IPInfo API (location + network details) | Python | briandconnelly | community |
+| [Regrid MCP Server](https://regrid.com/mcp) | 160M+ US/Canada land parcels — query by location, zoning, acreage, ownership & building criteria | — | Regrid | official |
+| [TimezoneToolkit](https://github.com/Cicatriiz/timezone-toolkit) | Timezone conversion plus sunrise/sunset/twilight from lat/long | TypeScript | Cicatriiz | community |
 
 <!-- AUTOGEN:END -->
